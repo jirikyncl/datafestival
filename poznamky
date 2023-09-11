@@ -1,0 +1,51 @@
+pg_dump -OFp -h 109.248.251.166 -U geotix -p 5434 -d geotix -n fe -t common.municipality -t common.population_base -t common.crime_map_data_2 -f source_data.sql
+
+sudo -u postgres psql
+
+create database datafestival;
+
+create extension postgis;
+
+create schema common;
+
+psql -h localhost -U postgres -d datafestival -f source_data.sql
+
+
+"2012-01-04 10:00:00"
+2000
+
+
+TČ - Násilná - 1
+TČ - Požáry - 13
+TČ - Vloupání - 18
+TČ - Krádeže - 35
+TČ - Podvody - 54
+TČ - Jiná majetková - 55
+TČ - Obecná - 63
+TČ - Dopravní nehody - 79
+TČ - Toxikománie - 80
+TČ - Trestná činnost se zbraní - 84
+TČ - Extremismus - 96
+Přestupky - 97
+
+
+-------------------------------------------------------------------
+
+pg_dump -OFp -h localhost -U postgres -p 5432 -d datafestival -n df -t df.crime -t df.municipality -t df.population -f base_data.sql
+
+
+---------------------------------------------------------------------
+
+psql -h localhost -U postgres -d datafestival -a -f base_view_geojson.sql > geojson.json
+
+
+----------------------------------------------------------------------
+
+Azure
+
+https://samples.azuremaps.com/
+
+https://portal.azure.com/
+
+subscriptionKey: toI9nl-12Ow7jNVayayQbRXE0tM11TTLyD_DYKoe1rM
+
