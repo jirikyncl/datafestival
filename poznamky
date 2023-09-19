@@ -28,16 +28,13 @@ TČ - Trestná činnost se zbraní - 84
 TČ - Extremismus - 96
 Přestupky - 97
 
-
 -------------------------------------------------------------------
 
 pg_dump -OFp -h localhost -U postgres -p 5432 -d datafestival -n df -t df.crime -t df.municipality -t df.population -f base_data.sql
 
-
 ---------------------------------------------------------------------
 
 psql -h localhost -U postgres -d datafestival -a -f base_view_geojson.sql > geojson.json
-
 
 ----------------------------------------------------------------------
 
@@ -48,4 +45,40 @@ https://samples.azuremaps.com/
 https://portal.azure.com/
 
 subscriptionKey: toI9nl-12Ow7jNVayayQbRXE0tM11TTLyD_DYKoe1rM
+
+----------------------------------------------------------------------
+
+>> Klienti
+Azure Maps - poradi si s temito https://learn.microsoft.com/en-us/azure/azure-maps/spatial-io-read-write-spatial-data
+
+Leaflet
+
+OpenLayers
+
+>> Server side
+Geoserver
+
+Postgis
+
+Google? https://www.youtube.com/watch?v=j9ZO4mTDAtM&t=2575s&ab_channel=GoogleforDevelopers
+
+-------------------------------------------
+
+DB client
+https://dbeaver.io/download/
+https://www.pgadmin.org/download/
+
+-------------------------------------------
+
+Azure postgres
+
+Azure Database for PostgreSQL Single Server
+
+Zabezpeceni pripojeni:
+- vypnout ssl
+- Přidat 0.0.0.0–255.255.255.255
+- restartovat
+
+psql "host=datafestival-postgres.postgres.database.azure.com port=5432 dbname=postgres user=postgres@datafestival-postgres password=Datafestival.2023"
+
 
