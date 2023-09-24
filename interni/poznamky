@@ -1,14 +1,20 @@
-pg_dump -OFp -h 109.248.251.166 -U geotix -p 5434 -d geotix -n fe -t common.municipality -t common.population_base -t common.crime_map_data_2 -f source_data.sql
-
-sudo -u postgres psql
-
 create database datafestival;
 
 create extension postgis;
 
 create schema common;
 
+pg_dump -OFp -h 109.248.251.166 -U geotix -p 5434 -d geotix -t common.municipality -t common.district -t common.population_base -t common.crime_map_data_2 -f source_data.sql
+
 psql -h localhost -U postgres -d datafestival -f source_data.sql
+
+pustit prepare_base_data.sql
+
+pg_dump -OFp -h localhost -U postgres -p 5432 -d datafestival -t crime -t district -t population -f base_data.sql
+
+------------------------------------------------------------------
+
+sudo -u postgres psql
 
 
 "2012-01-04 10:00:00"
@@ -30,7 +36,7 @@ Přestupky - 97
 
 -------------------------------------------------------------------
 
-pg_dump -OFp -h localhost -U postgres -p 5432 -d datafestival -n df -t df.crime -t df.municipality -t df.population -f base_data.sql
+
 
 ---------------------------------------------------------------------
 
