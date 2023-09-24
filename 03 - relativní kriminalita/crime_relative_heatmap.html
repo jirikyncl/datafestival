@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Crime relative heatmap</title>
+
+    <meta charset="utf-8" />
+    <link rel="shortcut icon" href="/favicon.ico"/>
+
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+    <meta name="description" content="This sample shows how to create a simple heat map from a data set of point features." />
+    <meta name="keywords" content="Microsoft maps, map, gis, API, SDK, heatmap, heat map, heatmaps, heat maps, density, layer, thermatic, earthquakes, USGS" />
+    <meta name="author" content="Microsoft Azure Maps" /><meta name="version" content="1.0" />
+    <meta name="screenshot" content="screenshot.jpg" />
+
+    <!-- Add references to the Azure Maps Map control JavaScript and CSS files. -->
+    <link href="https://atlas.microsoft.com/sdk/javascript/mapcontrol/3/atlas.min.css" rel="stylesheet" />
+    <script src="https://atlas.microsoft.com/sdk/javascript/mapcontrol/3/atlas.min.js"></script>
+
+    <!-- Add reference to the Azure Maps Spatial IO module. -->
+    <script src="https://atlas.microsoft.com/sdk/javascript/spatial/0/atlas-spatial.min.js"></script>
+
+
+    <script>
+      var map, datasource;
+
+      function initMap(geoJson) {
+        //Initialize a map instance.
+        map = new atlas.Map('myMap', {
+          view: 'Auto',
+          center: [14.4, 50],
+          zoom: 6,
+
+          //Add authentication details for connecting to Azure Maps.
+          authOptions: {
+            authType: 'subscriptionKey',
+            subscriptionKey: 'toI9nl-12Ow7jNVayayQbRXE0tM11TTLyD_DYKoe1rM'
+          }
+        });
+
+        //Wait until the map resources are ready.
+        map.events.add('ready', function () {
+          datasource = new atlas.source.DataSource();
+          map.sources.add(datasource);
+
+          //Create a heatmap and add it to the map.
+          map.layers.add(new atlas.layer.HeatMapLayer(datasource, null, {
+            weight: [
+              'interpolate',
+              ['exponential', 2],
+              ['/', ['get', 'crime_count'], ['get', 'person_count']],
+              0.001, 0,
+              0.007, 2
+            ],
+            radius: [
+              'interpolate',
+              ['linear'],
+              ['zoom'],
+              1, 6,
+              22, 350
+            ],
+            color: [
+              'interpolate',
+              ['linear'],
+              ['heatmap-density'],
+              0, 'rgba(33,102,172,0)',
+              0.1, 'rgb(103,169,207)',
+              0.2, 'rgb(209,229,240)',
+              0.5, 'rgb(253,219,199)',
+              0.9, 'rgb(239,138,98)',
+              1, 'rgb(178,24,43)'
+            ]
+          }), 'labels');
+
+          atlas.io.read(geoJson).then(r => {
+            if (r) {
+              //Add the feature data to the data source.
+              datasource.add(r);
+            }
+          });
+        });
+      }
+
+      function handleFile() {
+        const fileInput = document.getElementById('fileInput');
+        if (fileInput.files.length === 0) {
+          alert('Vyberte soubor k načtení.');
+          return;
+        }
+
+        const selectedFile = fileInput.files[0];
+        const reader = new FileReader();
+        reader.onload = function(event) {
+          const fileContent = event.target.result;
+          initMap(fileContent);
+        }
+        reader.readAsText(selectedFile);
+      }
+    </script>
+</head>
+<body>
+
+<form id="myForm">
+    <input type="file" id="fileInput">
+    <button type="button" onclick="handleFile()">Načíst soubor</button>
+</form>
+
+<div id="myMap" style="position:relative;width:100%;min-width:290px;height:600px;"></div>
+</body>
+</html>

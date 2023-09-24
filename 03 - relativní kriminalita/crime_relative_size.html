@@ -3,7 +3,7 @@
 <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Leaflet GeoJSON Circle Color</title>
+    <title>Leaflet GeoJSON Circle Size</title>
     <link rel="stylesheet" href="https://unpkg.com/leaflet@1.7.1/dist/leaflet.css" />
     <script src="https://unpkg.com/leaflet@1.7.1/dist/leaflet.js"></script>
     <style>
@@ -25,32 +25,18 @@
 
   L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
     maxZoom: 19,
-    opacity: 0.7
   }).addTo(map);
+
 
   function initMap(geoJson) {
     L.geoJSON(JSON.parse(geoJson), {
       pointToLayer: function (feature, latlng) {
-        const circleSize = feature.properties.crime_count || 10;
-        const circleColor = getColor(feature.properties.crime_count);
-        return L.circle(latlng, {
-          radius: circleSize,
-          fillColor: circleColor,
-          color: 'gray',
-          weight: 1,
-          opacity: 1,
-          fillOpacity: 0.8
-        });
+        const circleSize = (feature.properties.crime_count / feature.properties.person_count) || 10;
+
+
+        return L.circle(latlng, { radius: circleSize * 1000000 });
       }
     }).addTo(map);
-  }
-
-  function getColor(size) {
-    // Zde můžete definovat barevnou škálu podle rozsahu hodnot
-    return size > 5000 ? 'red' :
-      size > 500 ? 'orange' :
-        size > 300 ? 'yellow' :
-          'green';
   }
 
   function handleFile() {

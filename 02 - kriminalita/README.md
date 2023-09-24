@@ -4,8 +4,8 @@ Cíl: Zobrazení kriminality (35 - krádeže) v absolutních číslech po okrese
 
 ## Propojení údajů o kriminalitě s okresem
 
-Pustíme: crime.sql
-Vyexportujeme jako GeoJSON: crime_point_geojson.sql (klidně zase zobrazíme https://geojson.tools/) (výstup help/crime_point_geojson.json)
+Pustíme: crime_relative.sql
+Vyexportujeme jako GeoJSON: crime_relative_point_geojson.sql (klidně zase zobrazíme https://geojson.tools/) (výstup help/crime_point_geojson.json)
 
 Co tomu chybí? Vizuální informace o počtu TČ. Něco, z čeho si na první pohled uděláme 
 obrázek o situaci - podstata vizualizace dat.
