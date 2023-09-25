@@ -35,9 +35,10 @@ TODO - vizualizace relaci tabulek?
 ## Základní zobrazení geometrie
 
 - databázový klient
-- GeoJSON - jeden ze standardů (GML, KML, Spatial CSV, ...) třeba zde: https://geojson.tools/ - 
+- GeoJSON - jeden ze standardů (GML, KML, Spatial CSV, ...) třeba zde: https://geojson.tools/ (výstup help/district_point_geojson.json)
+- district.html - rozumí CSV i GeoJSON
 
-GeoJSON okresů: district_point_geojson.sql (výstup help/district_point_geojson.json)
+TODO - cluster pohled?
 
 
 

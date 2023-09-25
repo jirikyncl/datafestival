@@ -13,6 +13,6 @@ tj. kolik trestných činů připadá na jednoho obyvatele okresu (počet trestn
 
 - pomocí velikosti Leaflet - crime_relative_size.html
 - pomocí sloupců - Azure maps - crime_relative_bar.html
-- pomocí heatmap - Azure maps - crime_relative_map.html
+- pomocí heatmap - Azure maps - crime_relative_heatmap.html
 
 

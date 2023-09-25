@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>District CSV</title>
+
+    <meta charset="utf-8" />
+    <link rel="shortcut icon" href="/favicon.ico"/>
+
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+    <meta name="description" content="This sample shows how to enable point based clustering on a data source and render them differently from individual points on the map." />
+    <meta name="author" content="Microsoft Azure Maps" /><meta name="version" content="1.0" />
+    <meta name="screenshot" content="screenshot.jpg" />
+
+    <link href="https://atlas.microsoft.com/sdk/javascript/mapcontrol/3/atlas.min.css" rel="stylesheet" />
+    <script src="https://atlas.microsoft.com/sdk/javascript/mapcontrol/3/atlas.min.js"></script>
+
+    <script src="https://atlas.microsoft.com/sdk/javascript/spatial/0/atlas-spatial.min.js"></script>
+
+    <script type="text/javascript">
+      var map, datasource, layer;
+
+      function initMap(content)
+      {
+        map = new atlas.Map('myMap', {
+          center: [14.4, 50],
+          zoom: 12,
+          view: "Auto",
+
+          //Add authentication details for connecting to Azure Maps.
+          authOptions: {
+            authType: 'subscriptionKey',
+            subscriptionKey: 'toI9nl-12Ow7jNVayayQbRXE0tM11TTLyD_DYKoe1rM'
+          },
+        });
+
+        //Wait until the map resources are ready.
+        map.events.add('ready', function () {
+          //Create a data source and add it to the map.
+          datasource = new atlas.source.DataSource();
+          map.sources.add(datasource);
+
+          //Add a simple data layer for rendering the data.
+          layer = new atlas.layer.SimpleDataLayer(datasource);
+          map.layers.add(layer);
+
+          //Read a CSV file from a URL or pass in a raw string.
+          atlas.io.read(content).then(r => {
+            console.log();
+            if (r) {
+              //Add the feature data to the data source.
+              datasource.add(r);
+
+              //If bounding box information is known for data, set the map view to it.
+              if (r.bbox) {
+                map.setCamera({
+                  bounds: r.bbox,
+                  padding: 50
+                });
+              }
+            }
+          });
+        });
+      }
+
+      function handleFile() {
+        const fileInput = document.getElementById('fileInput');
+
+        if (fileInput.files.length === 0) {
+          alert('Vyberte soubor k načtení.');
+          return;
+        }
+
+        const selectedFile = fileInput.files[0];
+        const reader = new FileReader();
+
+        reader.onload = function(event) {
+          const fileContent = event.target.result;
+          initMap(fileContent);
+        }
+
+        reader.readAsText(selectedFile);
+      }
+    </script>
+</head>
+<form id="myForm">
+    <input type="file" id="fileInput">
+    <button type="button" onclick="handleFile()">Načíst soubor</button>
+</form>
+<div id="fileContents"></div>
+
+<body>
+<div id="myMap" style="position:relative;width:100%;min-width:290px;height:600px;"></div>
+
+</body>
+</html>

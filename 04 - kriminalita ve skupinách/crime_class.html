@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Leaflet GeoJSON Circle Size</title>
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.7.1/dist/leaflet.css" />
+    <script src="https://unpkg.com/leaflet@1.7.1/dist/leaflet.js"></script>
+    <style>
+        #map {
+            height: 800px;
+        }
+    </style>
+</head>
+<body>
+<form id="myForm">
+    <input type="file" id="fileInput">
+    <button type="button" onclick="handleFile()">Načíst soubor</button>
+</form>
+
+<div id="map"></div>
+
+<script>
+  const map = L.map('map').setView([50, 14], 9);
+
+  L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+    maxZoom: 19,
+  }).addTo(map);
+
+  function getColor(quartile) {
+    if (quartile === 1) {
+      return '#6cff6c';
+    }
+    if (quartile === 2) {
+      return '#4678f6';
+    }
+    if (quartile === 3) {
+      return '#765ba8';
+    }
+    return '#9b4773'
+  }
+
+  function initMap(geoJson) {
+    L.geoJSON(JSON.parse(geoJson), {
+      style: function (feature) {
+        return { fillColor: getColor(feature.properties.quartile), color: '#333333', weight: 1, fillOpacity: 0.6 };
+      }
+    }).addTo(map);
+  }
+
+  function handleFile() {
+    const fileInput = document.getElementById('fileInput');
+    if (fileInput.files.length === 0) {
+      alert('Vyberte soubor k načtení.');
+      return;
+    }
+
+    const selectedFile = fileInput.files[0];
+    const reader = new FileReader();
+    reader.onload = function(event) {
+      const fileContent = event.target.result;
+      initMap(fileContent);
+    }
+    reader.readAsText(selectedFile);
+  }
+
+</script>
+</body>
+</html>

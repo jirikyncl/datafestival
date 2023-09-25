@@ -1,8 +1,12 @@
-Instalace pgAdmin:
+# Instalace pgAdmin:
 https://www.pgadmin.org/download/
 
-Databáze:
+Alternativně běží zde: TODO
+
+# Databáze:
+
+Docker TODO
+
+Alternativně běží zde: TODO
 
 
-
-TODO - naplneni tabulek
