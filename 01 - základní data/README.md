@@ -38,7 +38,7 @@ TODO - vizualizace relaci tabulek?
 - GeoJSON - jeden ze standardů (GML, KML, Spatial CSV, ...) třeba zde: https://geojson.tools/ (výstup help/district_point_geojson.json)
 - district.html - rozumí CSV i GeoJSON
 
-TODO - cluster pohled?
+TODO - cluster pohled
 
 
 
