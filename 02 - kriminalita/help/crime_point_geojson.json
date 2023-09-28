@@ -36,21 +36,6 @@
       "geometry": {
         "type": "Point",
         "coordinates": [
-          14.102850226,
-          50.147335701
-        ]
-      },
-      "properties": {
-        "code": 3203,
-        "name": "Kladno",
-        "crime_count": 816
-      }
-    },
-    {
-      "type": "Feature",
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
           15.200567089,
           50.02813621
         ]
@@ -58,7 +43,7 @@
       "properties": {
         "code": 3204,
         "name": "Kolín",
-        "crime_count": 419
+        "crime_count": 421
       }
     },
     {
@@ -133,7 +118,7 @@
       "properties": {
         "code": 3209,
         "name": "Praha-východ",
-        "crime_count": 621
+        "crime_count": 619
       }
     },
     {
@@ -148,7 +133,7 @@
       "properties": {
         "code": 3210,
         "name": "Praha-západ",
-        "crime_count": 455
+        "crime_count": 458
       }
     },
     {
@@ -163,7 +148,7 @@
       "properties": {
         "code": 3211,
         "name": "Příbram",
-        "crime_count": 423
+        "crime_count": 424
       }
     },
     {
@@ -321,21 +306,6 @@
       "geometry": {
         "type": "Point",
         "coordinates": [
-          12.373921169,
-          50.07963492
-        ]
-      },
-      "properties": {
-        "code": 3402,
-        "name": "Cheb",
-        "crime_count": 487
-      }
-    },
-    {
-      "type": "Feature",
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
           12.88607202,
           50.221317479
         ]
@@ -373,7 +343,7 @@
       "properties": {
         "code": 3405,
         "name": "Plzeň-město",
-        "crime_count": 1726
+        "crime_count": 1728
       }
     },
     {
@@ -388,7 +358,7 @@
       "properties": {
         "code": 3406,
         "name": "Plzeň-jih",
-        "crime_count": 155
+        "crime_count": 153
       }
     },
     {
@@ -464,21 +434,6 @@
         "code": 3501,
         "name": "Česká Lípa",
         "crime_count": 627
-      }
-    },
-    {
-      "type": "Feature",
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-          14.214780752,
-          50.782152627
-        ]
-      },
-      "properties": {
-        "code": 3502,
-        "name": "Děčín",
-        "crime_count": 660
       }
     },
     {
@@ -681,21 +636,6 @@
       "geometry": {
         "type": "Point",
         "coordinates": [
-          15.780204756,
-          50.038538396
-        ]
-      },
-      "properties": {
-        "code": 3606,
-        "name": "Pardubice",
-        "crime_count": 506
-      }
-    },
-    {
-      "type": "Feature",
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
           16.274883246,
           50.162838796
         ]
@@ -778,7 +718,7 @@
       "properties": {
         "code": 3701,
         "name": "Blansko",
-        "crime_count": 136
+        "crime_count": 135
       }
     },
     {
@@ -793,7 +733,7 @@
       "properties": {
         "code": 3702,
         "name": "Brno-město",
-        "crime_count": 3252
+        "crime_count": 3260
       }
     },
     {
@@ -808,7 +748,7 @@
       "properties": {
         "code": 3703,
         "name": "Brno-venkov",
-        "crime_count": 502
+        "crime_count": 495
       }
     },
     {
@@ -981,21 +921,6 @@
       "geometry": {
         "type": "Point",
         "coordinates": [
-          17.464701152,
-          49.988444645
-        ]
-      },
-      "properties": {
-        "code": 3801,
-        "name": "Bruntál",
-        "crime_count": 270
-      }
-    },
-    {
-      "type": "Feature",
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
           18.348375868,
           49.685365926
         ]
@@ -1131,6 +1056,81 @@
       "geometry": {
         "type": "Point",
         "coordinates": [
+          14.102850226,
+          50.147335701
+        ]
+      },
+      "properties": {
+        "code": 3203,
+        "name": "Kladno",
+        "crime_count": 816
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          12.373921169,
+          50.07963492
+        ]
+      },
+      "properties": {
+        "code": 3402,
+        "name": "Cheb",
+        "crime_count": 487
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          14.214780752,
+          50.782152627
+        ]
+      },
+      "properties": {
+        "code": 3502,
+        "name": "Děčín",
+        "crime_count": 660
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          15.780204756,
+          50.038538396
+        ]
+      },
+      "properties": {
+        "code": 3606,
+        "name": "Pardubice",
+        "crime_count": 506
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          17.464701152,
+          49.988444645
+        ]
+      },
+      "properties": {
+        "code": 3801,
+        "name": "Bruntál",
+        "crime_count": 270
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
           17.204642356,
           50.229369969
         ]
@@ -1153,7 +1153,7 @@
       "properties": {
         "code": 9999,
         "name": "území Hlavního města Prahy",
-        "crime_count": 12681
+        "crime_count": 12680
       }
     }
   ]

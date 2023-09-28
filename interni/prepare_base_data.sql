@@ -9,56 +9,43 @@ drop table if exists population;
 
 create table crime as
     select
-        -- obec
-        d.code district_code,
-
-        -- cas
-        extract(year from cm.measure_date) "year",
-
-        -- trestne ciny celkem
-        count(distinct cm.code) filter (where not 97 = any(cm.type)) crime_count,
-
-        -- rozpad trestnych cinu
-        count(*) filter (where 1 = any(cm.type) and not 97 = any(cm.type)) crime_1_count,
-        count(*) filter (where 13 = any(cm.type) and not 97 = any(cm.type)) crime_13_count,
-        count(*) filter (where 18 = any(cm.type) and not 97 = any(cm.type)) crime_18_count,
-        count(*) filter (where 35 = any(cm.type) and not 97 = any(cm.type)) crime_35_count,
-        count(*) filter (where 54 = any(cm.type) and not 97 = any(cm.type)) crime_54_count,
-        count(*) filter (where 55 = any(cm.type) and not 97 = any(cm.type)) crime_55_count,
-        count(*) filter (where 63 = any(cm.type) and not 97 = any(cm.type)) crime_63_count,
-        count(*) filter (where 79 = any(cm.type) and not 97 = any(cm.type)) crime_79_count,
-        count(*) filter (where 80 = any(cm.type) and not 97 = any(cm.type)) crime_80_count,
-        count(*) filter (where 84 = any(cm.type) and not 97 = any(cm.type)) crime_84_count,
-        count(*) filter (where 96 = any(cm.type) and not 97 = any(cm.type)) crime_96_count,
-
-        -- prestupky celkem
-        count(*) filter (where 97 = any(cm.type)) crime_97_count
+        row_number() over () AS id,
+        st_transform(definition_point, 4326) definition_point,
+        count(*) crime_count,
+        extract(year from cm.measure_date) "year"
     from common.crime_map_data_2 cm
-    join common.district d on st_contains(d.coordinates, cm.definition_point)
-    where cm.relevance in (1, 4) and cm.state not in (5, 6, 7)
+    where
+        cm.relevance in (1, 4)
+        and cm.state not in (5, 6, 7)
+        and 35 = any(cm.type) and not 97 = any(cm.type) -- kradeze TC
     group by
-        d.code,
+        cm.definition_point,
         extract(year from cm.measure_date)
 ;
 
-create index crime_district_code on crime (district_code);
+alter table crime add primary key (id);
+
+create index crime_district_definition_point on crime USING GIST (definition_point);
 create index crime_year on crime (year);
 
 -- DISTRICT
 
 create table district as
-    select code, name, st_transform(definition_point, 4326) definition_point, st_transform(st_simplify(coordinates, 500), 4326) coordinates from common.district;
+    select row_number() over () AS id, code, name, st_transform(definition_point, 4326) definition_point, st_transform(st_simplify(coordinates, 500), 4326) coordinates from common.district;
 
+alter table district add primary key (id);
 create index district_district_code on district (code);
+create index district_coordinates on district USING GIST (coordinates);
 
 -- POPULATION
 
 create table population as
-    select m.district_code, sum(man_count + woman_count) person_count, year
+    select row_number() over () AS id, m.district_code, sum(man_count + woman_count) person_count, year
     from common.population_base pb
     join common.municipality m on m.code = pb.municipality_code
     group by m.district_code, year;
 
+alter table population add primary key (id);
 create index population_district_code on population (district_code);
 create index population_year on population (year);
 

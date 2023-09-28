@@ -1,15 +1,14 @@
 with crime_view as (
     select
-        c.crime_35_count crime_count,
-        d.code district_code,
+        sum(c.crime_count) crime_count,
+        d.code,
         d.name,
         d.definition_point,
-        d.coordinates,
-        p.person_count
+        d.coordinates
     from district d
-    left join crime c on c.district_code = d.code
-    left join population p on c.district_code = p.district_code and c.year = p.year
+    left join crime c on st_contains(d.coordinates, c.definition_point)
     where c.year = 2022
+    group by d.id
 )
 
 select json_build_object(
@@ -19,10 +18,9 @@ select json_build_object(
                    'type', 'Feature',
                    'geometry', st_asgeojson(definition_point)::json,
                    'properties', json_build_object(
-                           'code', district_code,
+                           'code', code,
                            'name', name,
-                           'crime_count', crime_count,
-                           'person_count', person_count
+                           'crime_count', crime_count
                        )
                )
        )
