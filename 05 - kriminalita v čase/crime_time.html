@@ -1,11 +1,29 @@
 <!DOCTYPE html>
 <html>
 <head>
+    <title>Crime time</title>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Leaflet - Crime in time</title>
+
     <link rel="stylesheet" href="https://unpkg.com/leaflet@1.7.1/dist/leaflet.css" />
     <script src="https://unpkg.com/leaflet@1.7.1/dist/leaflet.js"></script>
+
+    <style>
+        * {
+            margin: 0;
+            font-family: sans-serif;
+        }
+        html {
+            height:100%;
+        }
+        body {
+            height:100%; margin: 0; overflow: hidden
+        }
+        form {
+            background: #e6e6e6; height: 22px; padding: 5px;
+        }
+    </style>
+
     <style>
         #map {
             height: 800px;
@@ -38,113 +56,114 @@
     </style>
 </head>
 <body>
-<form id="myForm">
-    <input type="file" id="fileInput">
-    <button type="button" onclick="handleFile()">Načíst soubor</button>
-</form>
+    <form id="myForm">
+        G-Tix
+        <input type="file" id="fileInput" placeholder="Vybrat soubor">
+        <button type="button" onclick="handleFile()">Načíst soubor</button>
+    </form>
 
-<div id="year"></div>
+    <div id="myMap" style="height: 100%; width: 100%;"></div>
 
-<div id="map"></div>
+    <div id="year"></div>
 
-<script>
-  const map = L.map('map').setView([50, 14], 8);
-  const contentLayer = L.featureGroup([]);
-  let dataByYear = {};
-  let years;
-  let yearIdx;
+    <script>
+      const map = L.map('myMap').setView([50, 14], 8);
+      const contentLayer = L.featureGroup([]);
+      let dataByYear = {};
+      let years;
+      let yearIdx;
 
-  L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
-    maxZoom: 19,
-  }).addTo(map);
+      L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+        maxZoom: 19,
+      }).addTo(map);
 
-  map.addLayer(contentLayer);
+      map.addLayer(contentLayer);
 
-  function nextYear() {
-    yearIdx = yearIdx + 1;
+      function nextYear() {
+        yearIdx = yearIdx + 1;
 
-    if (!years[yearIdx]) {
-      yearIdx = 0;
-    }
+        if (!years[yearIdx]) {
+          yearIdx = 0;
+        }
 
-    showYear();
+        showYear();
 
-    for (const l of contentLayer.getLayers()) {
-      for (const f of dataByYear[years[yearIdx]]) {
-        if (l.aux_code === f.properties.code) {
-          const color = getColor(yearIdx, f.properties.rate, l.aux_rate);
-          l.setRadius(getRadius(f.properties.rate));
-          l.setStyle({fillColor: color, color: color, opacity: 0.6});
-          l.aux_rate = f.properties.rate;
-          break;
+        for (const l of contentLayer.getLayers()) {
+          for (const f of dataByYear[years[yearIdx]]) {
+            if (l.aux_code === f.properties.code) {
+              const color = getColor(yearIdx, f.properties.rate, l.aux_rate);
+              l.setRadius(getRadius(f.properties.rate));
+              l.setStyle({fillColor: color, color: color, opacity: 0.6});
+              l.aux_rate = f.properties.rate;
+              break;
+            }
+          }
         }
       }
-    }
-  }
 
-  function initMap(geoJson) {
-    // rozdeleni podle let
-    for (const f of JSON.parse(geoJson).features) {
-      if (!dataByYear[f.properties.year]) {
-        dataByYear[f.properties.year] = [];
+      function initMap(geoJson) {
+        // rozdeleni podle let
+        for (const f of JSON.parse(geoJson).features) {
+          if (!dataByYear[f.properties.year]) {
+            dataByYear[f.properties.year] = [];
+          }
+          dataByYear[f.properties.year].push(f);
+        }
+
+        years = Object.keys(dataByYear);
+        yearIdx = 0;
+
+        showYear();
+
+        for (const f of dataByYear[years[yearIdx]]) {
+          const geom = [f.geometry.coordinates[1], f.geometry.coordinates[0]];
+          const color = getColor(0);
+          const circle = L.circle(geom, { fillColor: color, color: color, opacity: 0.6, radius: getRadius(f.properties.rate) });
+          circle.aux_code = f.properties.code;
+          circle.aux_rate = f.properties.rate;
+          contentLayer.addLayer(circle);
+        }
+
+        setInterval(nextYear, 5000);
       }
-      dataByYear[f.properties.year].push(f);
-    }
 
-    years = Object.keys(dataByYear);
-    yearIdx = 0;
+      function showYear() {
+        document.getElementById('year').textContent = years[yearIdx];
+      }
 
-    showYear();
+      function getColor(yId, currentRate, prevRate) {
+        if (yId === 0) {
+          return '#0000FF';
+        }
+        if (currentRate > prevRate) {
+          return '#FF0000';
+        }
+        if (currentRate < prevRate) {
+          return '#00FF00';
+        }
+        return '#555555';
+      }
 
-    for (const f of dataByYear[years[yearIdx]]) {
-      const geom = [f.geometry.coordinates[1], f.geometry.coordinates[0]];
-      const color = getColor(0);
-      const circle = L.circle(geom, { fillColor: color, color: color, opacity: 0.6, radius: getRadius(f.properties.rate) });
-      circle.aux_code = f.properties.code;
-      circle.aux_rate = f.properties.rate;
-      contentLayer.addLayer(circle);
-    }
+      function getRadius(rate) {
+        return rate * 500000;
+      }
 
-    setInterval(nextYear, 5000);
-  }
+      function handleFile() {
+        const fileInput = document.getElementById('fileInput');
+        if (fileInput.files.length === 0) {
+          alert('Vyberte soubor k načtení.');
+          return;
+        }
 
-  function showYear() {
-    document.getElementById('year').textContent = years[yearIdx];
-  }
+        const selectedFile = fileInput.files[0];
+        const reader = new FileReader();
+        reader.onload = function(event) {
+          const fileContent = event.target.result;
+          initMap(fileContent);
+        }
+        reader.readAsText(selectedFile);
+      }
 
-  function getColor(yId, currentRate, prevRate) {
-    if (yId === 0) {
-      return '#0000FF';
-    }
-    if (currentRate > prevRate) {
-      return '#FF0000';
-    }
-    if (currentRate < prevRate) {
-      return '#00FF00';
-    }
-    return '#555555';
-  }
-
-  function getRadius(rate) {
-    return rate * 500000;
-  }
-
-  function handleFile() {
-    const fileInput = document.getElementById('fileInput');
-    if (fileInput.files.length === 0) {
-      alert('Vyberte soubor k načtení.');
-      return;
-    }
-
-    const selectedFile = fileInput.files[0];
-    const reader = new FileReader();
-    reader.onload = function(event) {
-      const fileContent = event.target.result;
-      initMap(fileContent);
-    }
-    reader.readAsText(selectedFile);
-  }
-
-</script>
+    </script>
 </body>
 </html>

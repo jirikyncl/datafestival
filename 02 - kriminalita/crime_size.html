@@ -1,58 +1,72 @@
 <!DOCTYPE html>
 <html>
 <head>
+    <title>Crime size</title>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Leaflet GeoJSON Circle Size</title>
+
     <link rel="stylesheet" href="https://unpkg.com/leaflet@1.7.1/dist/leaflet.css" />
     <script src="https://unpkg.com/leaflet@1.7.1/dist/leaflet.js"></script>
+
     <style>
-        #map {
-            height: 800px;
+        * {
+            margin: 0;
+            font-family: sans-serif;
+        }
+        html {
+            height:100%;
+        }
+        body {
+            height:100%; margin: 0; overflow: hidden
+        }
+        form {
+            background: #e6e6e6; height: 22px; padding: 5px;
         }
     </style>
 </head>
+
 <body>
-<form id="myForm">
-    <input type="file" id="fileInput">
-    <button type="button" onclick="handleFile()">Načíst soubor</button>
-</form>
+    <form id="myForm">
+        G-Tix
+        <input type="file" id="fileInput" placeholder="Vybrat soubor">
+        <button type="button" onclick="handleFile()">Načíst soubor</button>
+    </form>
 
-<div id="map"></div>
+    <div id="myMap" style="height: 100%; width: 100%;"></div>
 
-<script>
-  const map = L.map('map').setView([50, 14], 9);
+    <script>
+      const map = L.map('myMap').setView([50, 14], 9);
 
-  L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
-    maxZoom: 19,
-  }).addTo(map);
+      L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+        maxZoom: 19,
+      }).addTo(map);
 
 
-  function initMap(geoJson) {
-    L.geoJSON(JSON.parse(geoJson), {
-      pointToLayer: function (feature, latlng) {
-        const circleSize = feature.properties.crime_count || 10;
-        return L.circle(latlng, { radius: circleSize });
+      function initMap(geoJson) {
+        L.geoJSON(JSON.parse(geoJson), {
+          pointToLayer: function (feature, latlng) {
+            const circleSize = feature.properties.crime_count || 10;
+            return L.circle(latlng, { radius: circleSize });
+          }
+        }).addTo(map);
       }
-    }).addTo(map);
-  }
 
-  function handleFile() {
-    const fileInput = document.getElementById('fileInput');
-    if (fileInput.files.length === 0) {
-      alert('Vyberte soubor k načtení.');
-      return;
-    }
+      function handleFile() {
+        const fileInput = document.getElementById('fileInput');
+        if (fileInput.files.length === 0) {
+          alert('Vyberte soubor k načtení.');
+          return;
+        }
 
-    const selectedFile = fileInput.files[0];
-    const reader = new FileReader();
-    reader.onload = function(event) {
-      const fileContent = event.target.result;
-      initMap(fileContent);
-    }
-    reader.readAsText(selectedFile);
-  }
+        const selectedFile = fileInput.files[0];
+        const reader = new FileReader();
+        reader.onload = function(event) {
+          const fileContent = event.target.result;
+          initMap(fileContent);
+        }
+        reader.readAsText(selectedFile);
+      }
 
-</script>
+    </script>
 </body>
 </html>

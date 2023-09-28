@@ -32,13 +32,17 @@ Kriminalita crime_id_count, kde id je:
 
 TODO - vizualizace relaci tabulek?
 
-## Základní zobrazení geometrie
+## Zobrazení dat
 
-- databázový klient
+- Excel like editor
+- Databázový klient
+
+## Zobrazení geometrie
+
+- databázový klient - select * from ...
 - GeoJSON - jeden ze standardů (GML, KML, Spatial CSV, ...) třeba zde: https://geojson.tools/ (výstup help/district_point_geojson.json)
-- district.html - rozumí CSV i GeoJSON
+- district.html - rozumí CSV (spatial) i GeoJSON
 
-TODO - cluster pohled
 
 
 

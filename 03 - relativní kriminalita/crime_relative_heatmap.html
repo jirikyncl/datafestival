@@ -2,23 +2,28 @@
 <html lang="en">
 <head>
     <title>Crime relative heatmap</title>
-
     <meta charset="utf-8" />
-    <link rel="shortcut icon" href="/favicon.ico"/>
-
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
-    <meta name="description" content="This sample shows how to create a simple heat map from a data set of point features." />
-    <meta name="keywords" content="Microsoft maps, map, gis, API, SDK, heatmap, heat map, heatmaps, heat maps, density, layer, thermatic, earthquakes, USGS" />
-    <meta name="author" content="Microsoft Azure Maps" /><meta name="version" content="1.0" />
-    <meta name="screenshot" content="screenshot.jpg" />
 
-    <!-- Add references to the Azure Maps Map control JavaScript and CSS files. -->
-    <link href="https://atlas.microsoft.com/sdk/javascript/mapcontrol/3/atlas.min.css" rel="stylesheet" />
+    <link href="https://atlas.microsoft.com/sdk/javascript/mapcontrol/3/atlas.min.css" rel="stylesheet"/>
     <script src="https://atlas.microsoft.com/sdk/javascript/mapcontrol/3/atlas.min.js"></script>
-
-    <!-- Add reference to the Azure Maps Spatial IO module. -->
     <script src="https://atlas.microsoft.com/sdk/javascript/spatial/0/atlas-spatial.min.js"></script>
 
+    <style>
+        * {
+            margin: 0;
+            font-family: sans-serif;
+        }
+        html {
+            height:100%;
+        }
+        body {
+            height:100%; margin: 0; overflow: hidden
+        }
+        form {
+            background: #e6e6e6; height: 22px; padding: 5px;
+        }
+    </style>
 
     <script>
       var map, datasource;
@@ -97,13 +102,14 @@
       }
     </script>
 </head>
+
 <body>
+    <form id="myForm">
+        G-Tix
+        <input type="file" id="fileInput" placeholder="Vybrat soubor">
+        <button type="button" onclick="handleFile()">Načíst soubor</button>
+    </form>
 
-<form id="myForm">
-    <input type="file" id="fileInput">
-    <button type="button" onclick="handleFile()">Načíst soubor</button>
-</form>
-
-<div id="myMap" style="position:relative;width:100%;min-width:290px;height:600px;"></div>
+    <div id="myMap" style="height: 100%; width: 100%;"></div>
 </body>
 </html>

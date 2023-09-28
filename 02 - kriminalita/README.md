@@ -12,12 +12,9 @@ obrázek o situaci - podstata vizualizace dat.
 
 ## Vizualizace počtu TČ
 
-- Získaný GeoJSON uložíme.
 - Máme připravenou HTML stránku crime_circle_size.html, kde pomocí JS knihovny Leaflet zobrazíme okresy, velikostí naznačíme počet TČ.
-
-Místo velikosti jsme mohli použít také barvu, tvar, ikonu: 
-
 - Vizualizace pomocí barev a velikosti: crime_color.html
+- Vizualizace pomoci crime_cluster.html
 
 
 

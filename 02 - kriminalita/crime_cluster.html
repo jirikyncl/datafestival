@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Crime cluster</title>
+    <meta charset="utf-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no"/>
+
+    <link href="https://atlas.microsoft.com/sdk/javascript/mapcontrol/3/atlas.min.css" rel="stylesheet"/>
+    <script src="https://atlas.microsoft.com/sdk/javascript/mapcontrol/3/atlas.min.js"></script>
+    <script src="https://atlas.microsoft.com/sdk/javascript/spatial/0/atlas-spatial.min.js"></script>
+
+    <style>
+        * {
+            margin: 0;
+            font-family: sans-serif;
+        }
+        html {
+            height:100%;
+        }
+        body {
+            height:100%; margin: 0; overflow: hidden
+        }
+        form {
+            background: #e6e6e6; height: 22px; padding: 5px;
+        }
+    </style>
+
+    <script>
+      function initMap(geoJson) {
+        const map = new atlas.Map('myMap', {
+          center: [14.4, 50],
+          zoom: 9,
+          style: 'day',
+          view: 'Auto',
+
+          authOptions: {
+            authType: 'subscriptionKey',
+            subscriptionKey: 'toI9nl-12Ow7jNVayayQbRXE0tM11TTLyD_DYKoe1rM'
+          }
+        });
+
+        map.events.add('ready', function () {
+          const datasource = new atlas.source.DataSource(null, {
+            cluster: true,
+            clusterRadius: 45,
+            clusterMaxZoom: 21,
+            clusterProperties: {
+              crime_count_sum: ['+', ['get', 'crime_count']]
+            }
+          });
+
+          atlas.io.read(geoJson).then(r => {
+            if (r) {
+              datasource.add(r);
+            }
+          });
+
+          map.sources.add(datasource);
+
+
+          const clusterBubbleLayer = new atlas.layer.BubbleLayer(datasource, null, {
+            filter: ['has', 'crime_count_sum'],
+            createIndicators: true,
+            radius: [
+              'step',
+              ['get', 'crime_count_sum'],
+              20,         //Default of 20 pixel radius.
+              100, 30,    //If crime_count_sum >= 100, radius is 30 pixels.
+              750, 40     //If crime_count_sum >= 750, radius is 40 pixels.
+            ],
+            color: [
+              'step',
+              ['get', 'crime_count_sum'],
+              '#73CC73',            //Default to green.
+              100, '#CBCB67',     //If the crime_count_sum >= 100, color is yellow.
+              750, '#C76A6A'        //If the crime_count_sum >= 100, color is red.
+            ],
+            strokeWidth: 0
+          });
+
+          const bubbleLayer = new atlas.layer.BubbleLayer(datasource, null, {
+            filter: ['!', ['has', 'crime_count_sum']],
+            color: '#73CC73',
+            radius: 20
+          });
+
+          const clusterSymLayer = new atlas.layer.SymbolLayer(datasource, null, {
+            filter: ['has', 'crime_count_sum'],
+            iconOptions: {
+              image: 'none'
+            },
+            textOptions: {
+              textField: ['get', 'crime_count_sum'],
+              offset: [0, 0.4]
+            }
+          });
+
+          const symLayer = new atlas.layer.SymbolLayer(datasource, null, {
+            filter: ['!', ['has', 'crime_count_sum']],
+            iconOptions: {
+              image: 'none'
+            },
+            textOptions: {
+              textField: ['get', 'crime_count'],
+              offset: [0, 0.4]
+            }
+          });
+
+          map.layers.add([
+            clusterBubbleLayer,
+            bubbleLayer,
+            clusterSymLayer,
+            symLayer,
+          ]);
+        });
+      }
+
+      function handleFile() {
+        const fileInput = document.getElementById('fileInput');
+        if (fileInput.files.length === 0) {
+          alert('Vyberte soubor k načtení.');
+          return;
+        }
+
+        const selectedFile = fileInput.files[0];
+        const reader = new FileReader();
+        reader.onload = function (event) {
+          const fileContent = event.target.result;
+          initMap(fileContent);
+        }
+        reader.readAsText(selectedFile);
+      }
+    </script>
+</head>
+
+<body>
+    <form id="myForm">
+        G-Tix
+        <input type="file" id="fileInput" placeholder="Vybrat soubor">
+        <button type="button" onclick="handleFile()">Načíst soubor</button>
+    </form>
+
+    <div id="myMap" style="height: 100%; width: 100%;"></div>
+</body>
+</html>

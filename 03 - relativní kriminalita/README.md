@@ -7,6 +7,8 @@ Cíl: Vztáhnout údaje o kriminalitě k počtu obyvatel a použít další typy
 Spustíme: crime_relative.sql
 Vyexportujeme GeoJSON crime_relative_point_geojson.sql (výstup help/crime_relative_point_geojson.json)
 
+Alternativně v Excel
+
 ## Vizualizace relativního počtu TČ
 
 tj. kolik trestných činů připadá na jednoho obyvatele okresu (počet trestných činů / počet obyvatel)
