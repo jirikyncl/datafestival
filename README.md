@@ -7,9 +7,6 @@ propojit je a vyzkoušet různé typy vizualizací dat v prostoru.
 
 
 ## Vizualizace dat
-TODO - Jen na okraj: vizualizace dat k čemu to je..., jak je to s prostorovou vizualizací.
-Grafy známe každý 
-
 Vizualizace dat - grafické vyjádření dat (hodnoty, kategorie, porovnání, ...), klasicky grafy
 Proč vizualizujeme data - při vizualizaci chápeme velmi rychle souvislosti, oproti přístupu k samotným hodnotám (viz obrázek vizualizace-dat-1.png)
 Jaké máme nástroje - vizualizace-dat-2.png
@@ -17,10 +14,11 @@ Jaké máme nástroje - vizualizace-dat-2.png
 
 ## Jak budeme postupovat
 Workshop je rozdělen do několika kroků (složka s číselným označením), v každém z nich vytvoříme na základě 
-zdrojových dat nový dataset a ukážeme si nějaký typ vizualizace v mapě. 
+zdrojových dat nový dataset, vyexportujeme ho do GeoJSON a ukážeme nějaký typ vizualizace v mapě. V každé části je podsložka help, 
+ve které jsou umístěny databázové dotazy i výstupy (pro případ, že se někde zasekneme nebo nebudeme stíhat).
 
 Začneme s propojením dat v databázi, zobrazením základních dat v prostoru a krůček po krůčku se dostaneme k porovnání 
-kriminality a nezaměstnanosti
+kriminality a nezaměstnanosti nebo k vývoji kriminality v čase.
 
 
 ## S čím budeme pracovat

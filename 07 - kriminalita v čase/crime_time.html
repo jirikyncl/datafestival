@@ -91,10 +91,10 @@
         for (const l of contentLayer.getLayers()) {
           for (const f of dataByYear[years[yearIdx]]) {
             if (l.aux_code === f.properties.code) {
-              const color = getColor(yearIdx, f.properties.rate, l.aux_rate);
-              l.setRadius(getRadius(f.properties.rate));
+              const color = getColor(yearIdx, f.properties.crime_person_rate, l.aux_crime_person_rate);
+              l.setRadius(getRadius(f.properties.crime_person_rate));
               l.setStyle({fillColor: color, color: color, opacity: 0.6});
-              l.aux_rate = f.properties.rate;
+              l.aux_crime_person_rate = f.properties.crime_person_rate;
               break;
             }
           }
@@ -118,9 +118,9 @@
         for (const f of dataByYear[years[yearIdx]]) {
           const geom = [f.geometry.coordinates[1], f.geometry.coordinates[0]];
           const color = getColor(0);
-          const circle = L.circle(geom, { fillColor: color, color: color, opacity: 0.6, radius: getRadius(f.properties.rate) });
+          const circle = L.circle(geom, { fillColor: color, color: color, opacity: 0.6, radius: getRadius(f.properties.crime_person_rate) });
           circle.aux_code = f.properties.code;
-          circle.aux_rate = f.properties.rate;
+          circle.aux_crime_person_rate = f.properties.crime_person_rate;
           contentLayer.addLayer(circle);
         }
 

@@ -4,7 +4,7 @@ create extension postgis;
 
 create schema common;
 
-pg_dump -OFp -h 109.248.251.166 -U geotix -p 5434 -d geotix -t common.municipality -t common.district -t common.population_base -t common.crime_map_data_2 -f source_data.sql
+pg_dump -OFp -h 109.248.251.166 -U geotix -p 5434 -d geotix -t common.municipality -t common.district -t common.population_base -t common.crime_map_data_2 -t common.population_unemployment -f source_data.sql
 
 psql -h localhost -U postgres -d datafestival -f source_data.sql
 

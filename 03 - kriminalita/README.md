@@ -1,6 +1,6 @@
 # Kriminalita
 
-Cíl: Zobrazení kriminality (35 - krádeže) v absolutních číslech po okresech za rok 2022
+Cíl: Zobrazení kriminality (krádeží) v absolutních číslech po okresech za rok 2022
 
 ## Propojení údajů o kriminalitě s okresem
 

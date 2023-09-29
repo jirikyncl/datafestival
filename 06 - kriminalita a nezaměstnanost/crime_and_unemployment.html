@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Crime and unemployment</title>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.7.1/dist/leaflet.css" />
+    <script src="https://unpkg.com/leaflet@1.7.1/dist/leaflet.js"></script>
+    <style>
+        * {
+            margin: 0;
+            font-family: sans-serif;
+        }
+        html {
+            height:100%;
+        }
+        body {
+            height:100%; margin: 0; overflow: hidden
+        }
+        form {
+            background: #e6e6e6; height: 22px; padding: 5px;
+        }
+    </style>
+</head>
+<body>
+<form id="myForm">
+    G-Tix
+    <input type="file" id="fileInput" placeholder="Vybrat soubor">
+    <button type="button" onclick="handleFile()">Načíst soubor</button>
+</form>
+
+<div id="myMap" style="height: 100%; width: 100%;"></div>
+
+<script>
+  const map = L.map('myMap').setView([50, 14], 9);
+
+  L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+    maxZoom: 19,
+  }).addTo(map);
+
+  function getColor(category) {
+    if (category === 1) {
+      return '#73CC73';
+    }
+    if (category === 2) {
+      return '#CBCB67';
+    }
+    if (category === 3) {
+      return '#d29d5f';
+    }
+    return '#C76A6A'
+  }
+
+  function initMap(geoJson) {
+    L.geoJSON(JSON.parse(geoJson), {
+      style: function (feature) {
+        return { fillColor: getColor(feature.properties.category), color: '#ededed', weight: 1, fillOpacity: 0.7 };
+      }
+    }).addTo(map);
+
+    const unemploymentLayer = L.layerGroup(JSON.parse(geoJson).features.map(function (f) {
+      const latLng = [f.properties.definition_point.coordinates[1], f.properties.definition_point.coordinates[0]]
+      const circleSize = f.properties.unemployment_percentage * 1000;
+      return L.circle(latLng, {
+        radius: circleSize,
+        fillColor: 'blue',
+        color: 'blue',
+        weight: 1,
+        opacity: 1,
+        fillOpacity: 0.7
+      });
+    }));
+
+    unemploymentLayer.addTo(map);
+  }
+
+  function handleFile() {
+    const fileInput = document.getElementById('fileInput');
+    if (fileInput.files.length === 0) {
+      alert('Vyberte soubor k načtení.');
+      return;
+    }
+
+    const selectedFile = fileInput.files[0];
+    const reader = new FileReader();
+    reader.onload = function(event) {
+      const fileContent = event.target.result;
+      initMap(fileContent);
+    }
+    reader.readAsText(selectedFile);
+  }
+
+</script>
+</body>
+</html>

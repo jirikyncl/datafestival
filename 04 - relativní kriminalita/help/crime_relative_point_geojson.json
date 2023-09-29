@@ -6,326 +6,6 @@
       "geometry": {
         "type": "Point",
         "coordinates": [
-          15.780204756,
-          50.038538396
-        ]
-      },
-      "properties": {
-        "code": 3606,
-        "name": "Pardubice",
-        "crime_count": 506,
-        "person_count": 33393882
-      }
-    },
-    {
-      "type": "Feature",
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-          15.591243969,
-          49.396100083
-        ]
-      },
-      "properties": {
-        "code": 3707,
-        "name": "Jihlava",
-        "crime_count": 328,
-        "person_count": 11720141
-      }
-    },
-    {
-      "type": "Feature",
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-          14.537641122,
-          50.685513247
-        ]
-      },
-      "properties": {
-        "code": 3501,
-        "name": "Česká Lípa",
-        "crime_count": 627,
-        "person_count": 15398256
-      }
-    },
-    {
-      "type": "Feature",
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-          14.102850226,
-          50.147335701
-        ]
-      },
-      "properties": {
-        "code": 3203,
-        "name": "Kladno",
-        "crime_count": 816,
-        "person_count": 27161988
-      }
-    },
-    {
-      "type": "Feature",
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-          17.450901072,
-          49.455108842
-        ]
-      },
-      "properties": {
-        "code": 3808,
-        "name": "Přerov",
-        "crime_count": 294,
-        "person_count": 12048920
-      }
-    },
-    {
-      "type": "Feature",
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-          15.268163913,
-          49.9483885
-        ]
-      },
-      "properties": {
-        "code": 3205,
-        "name": "Kutná Hora",
-        "crime_count": 209,
-        "person_count": 7026480
-      }
-    },
-    {
-      "type": "Feature",
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-          13.796674097,
-          50.356988767
-        ]
-      },
-      "properties": {
-        "code": 3507,
-        "name": "Louny",
-        "crime_count": 297,
-        "person_count": 9487360
-      }
-    },
-    {
-      "type": "Feature",
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-          16.882028935,
-          48.758968473
-        ]
-      },
-      "properties": {
-        "code": 3704,
-        "name": "Břeclav",
-        "crime_count": 287,
-        "person_count": 16813368
-      }
-    },
-    {
-      "type": "Feature",
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-          17.99618931,
-          49.338708608
-        ]
-      },
-      "properties": {
-        "code": 3810,
-        "name": "Vsetín",
-        "crime_count": 357,
-        "person_count": 15639800
-      }
-    },
-    {
-      "type": "Feature",
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-          17.666332864,
-          49.226654003
-        ]
-      },
-      "properties": {
-        "code": 3705,
-        "name": "Zlín",
-        "crime_count": 349,
-        "person_count": 20002632
-      }
-    },
-    {
-      "type": "Feature",
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-          18.282043232,
-          49.834644908
-        ]
-      },
-      "properties": {
-        "code": 3807,
-        "name": "Ostrava-město",
-        "crime_count": 3484,
-        "person_count": 128040345
-      }
-    },
-    {
-      "type": "Feature",
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-          18.541688975,
-          49.854002773
-        ]
-      },
-      "properties": {
-        "code": 3803,
-        "name": "Karviná",
-        "crime_count": 1484,
-        "person_count": 52307856
-      }
-    },
-    {
-      "type": "Feature",
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-          14.010424458,
-          49.689877549
-        ]
-      },
-      "properties": {
-        "code": 3211,
-        "name": "Příbram",
-        "crime_count": 424,
-        "person_count": 17280438
-      }
-    },
-    {
-      "type": "Feature",
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-          13.636173506,
-          50.50300708
-        ]
-      },
-      "properties": {
-        "code": 3508,
-        "name": "Most",
-        "crime_count": 892,
-        "person_count": 12757688
-      }
-    },
-    {
-      "type": "Feature",
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-          16.468290614,
-          49.755937039
-        ]
-      },
-      "properties": {
-        "code": 3609,
-        "name": "Svitavy",
-        "crime_count": 145,
-        "person_count": 7215744
-      }
-    },
-    {
-      "type": "Feature",
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-          14.903184344,
-          50.411351372
-        ]
-      },
-      "properties": {
-        "code": 3207,
-        "name": "Mladá Boleslav",
-        "crime_count": 503,
-        "person_count": 18742640
-      }
-    },
-    {
-      "type": "Feature",
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-          15.832767778,
-          50.20922837
-        ]
-      },
-      "properties": {
-        "code": 3602,
-        "name": "Hradec Králové",
-        "crime_count": 403,
-        "person_count": 17366856
-      }
-    },
-    {
-      "type": "Feature",
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-          16.970607253,
-          49.965283603
-        ]
-      },
-      "properties": {
-        "code": 3809,
-        "name": "Šumperk",
-        "crime_count": 259,
-        "person_count": 12117374
-      }
-    },
-    {
-      "type": "Feature",
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-          13.824506773,
-          50.640397661
-        ]
-      },
-      "properties": {
-        "code": 3509,
-        "name": "Teplice",
-        "crime_count": 776,
-        "person_count": 18896788
-      }
-    },
-    {
-      "type": "Feature",
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-          15.171076549,
-          50.724307632
-        ]
-      },
-      "properties": {
-        "code": 3504,
-        "name": "Jablonec nad Nisou",
-        "crime_count": 389,
-        "person_count": 8733352
-      }
-    },
-    {
-      "type": "Feature",
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
           16.377517264,
           49.101444517
         ]
@@ -334,183 +14,7 @@
         "code": 3703,
         "name": "Brno-venkov",
         "crime_count": 495,
-        "person_count": 60305616
-      }
-    },
-    {
-      "type": "Feature",
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-          16.048796591,
-          48.855498711
-        ]
-      },
-      "properties": {
-        "code": 3713,
-        "name": "Znojmo",
-        "crime_count": 279,
-        "person_count": 16243920
-      }
-    },
-    {
-      "type": "Feature",
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-          15.003006769,
-          49.14404479
-        ]
-      },
-      "properties": {
-        "code": 3303,
-        "name": "Jindřichův Hradec",
-        "crime_count": 212,
-        "person_count": 8949699
-      }
-    },
-    {
-      "type": "Feature",
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-          17.902569153,
-          49.938663242
-        ]
-      },
-      "properties": {
-        "code": 3806,
-        "name": "Opava",
-        "crime_count": 459,
-        "person_count": 22055292
-      }
-    },
-    {
-      "type": "Feature",
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-          13.295054086,
-          49.395520331
-        ]
-      },
-      "properties": {
-        "code": 3404,
-        "name": "Klatovy",
-        "crime_count": 293,
-        "person_count": 8164182
-      }
-    },
-    {
-      "type": "Feature",
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-          16.998973501,
-          49.277469172
-        ]
-      },
-      "properties": {
-        "code": 3712,
-        "name": "Vyškov",
-        "crime_count": 135,
-        "person_count": 6693454
-      }
-    },
-    {
-      "type": "Feature",
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-          14.315206643,
-          48.810907406
-        ]
-      },
-      "properties": {
-        "code": 3302,
-        "name": "Český Krumlov",
-        "crime_count": 206,
-        "person_count": 4963040
-      }
-    },
-    {
-      "type": "Feature",
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-          17.250869694,
-          49.593868518
-        ]
-      },
-      "properties": {
-        "code": 3805,
-        "name": "Olomouc",
-        "crime_count": 977,
-        "person_count": 44970660
-      }
-    },
-    {
-      "type": "Feature",
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-          14.071995783,
-          49.963823555
-        ]
-      },
-      "properties": {
-        "code": 3202,
-        "name": "Beroun",
-        "crime_count": 338,
-        "person_count": 14775999
-      }
-    },
-    {
-      "type": "Feature",
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-          14.147501997,
-          49.308795485
-        ]
-      },
-      "properties": {
-        "code": 3305,
-        "name": "Písek",
-        "crime_count": 165,
-        "person_count": 5947050
-      }
-    },
-    {
-      "type": "Feature",
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-          18.348375868,
-          49.685365926
-        ]
-      },
-      "properties": {
-        "code": 3802,
-        "name": "Frýdek-Místek",
-        "crime_count": 657,
-        "person_count": 42075124
-      }
-    },
-    {
-      "type": "Feature",
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-          17.464701152,
-          49.988444645
-        ]
-      },
-      "properties": {
-        "code": 3801,
-        "name": "Bruntál",
-        "crime_count": 270,
-        "person_count": 9342736
+        "person_count": 231056
       }
     },
     {
@@ -526,551 +30,7 @@
         "code": 3502,
         "name": "Děčín",
         "crime_count": 660,
-        "person_count": 23290227
-      }
-    },
-    {
-      "type": "Feature",
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-          15.335520496,
-          50.60190541
-        ]
-      },
-      "properties": {
-        "code": 3608,
-        "name": "Semily",
-        "crime_count": 133,
-        "person_count": 5110280
-      }
-    },
-    {
-      "type": "Feature",
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-          13.733398821,
-          50.103700689
-        ]
-      },
-      "properties": {
-        "code": 3212,
-        "name": "Rakovník",
-        "crime_count": 132,
-        "person_count": 3980118
-      }
-    },
-    {
-      "type": "Feature",
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-          16.162887615,
-          50.416704498
-        ]
-      },
-      "properties": {
-        "code": 3605,
-        "name": "Náchod",
-        "crime_count": 242,
-        "person_count": 10701234
-      }
-    },
-    {
-      "type": "Feature",
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-          15.351624276,
-          50.437226243
-        ]
-      },
-      "properties": {
-        "code": 3604,
-        "name": "Jičín",
-        "crime_count": 139,
-        "person_count": 6204506
-      }
-    },
-    {
-      "type": "Feature",
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-          15.912703113,
-          50.561006632
-        ]
-      },
-      "properties": {
-        "code": 3610,
-        "name": "Trutnov",
-        "crime_count": 362,
-        "person_count": 15352152
-      }
-    },
-    {
-      "type": "Feature",
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-          15.795574991,
-          49.951092245
-        ]
-      },
-      "properties": {
-        "code": 3603,
-        "name": "Chrudim",
-        "crime_count": 185,
-        "person_count": 10533402
-      }
-    },
-    {
-      "type": "Feature",
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-          16.274883246,
-          50.162838796
-        ]
-      },
-      "properties": {
-        "code": 3607,
-        "name": "Rychnov nad Kněžnou",
-        "crime_count": 126,
-        "person_count": 5212090
-      }
-    },
-    {
-      "type": "Feature",
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-          17.132443152,
-          48.848934154
-        ]
-      },
-      "properties": {
-        "code": 3706,
-        "name": "Hodonín",
-        "crime_count": 297,
-        "person_count": 18862756
-      }
-    },
-    {
-      "type": "Feature",
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-          15.058448572,
-          50.76999733
-        ]
-      },
-      "properties": {
-        "code": 3505,
-        "name": "Liberec",
-        "crime_count": 959,
-        "person_count": 35984200
-      }
-    },
-    {
-      "type": "Feature",
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-          14.319793795,
-          49.960079825
-        ]
-      },
-      "properties": {
-        "code": 3210,
-        "name": "Praha-západ",
-        "crime_count": 458,
-        "person_count": 36077580
-      }
-    },
-    {
-      "type": "Feature",
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-          15.04167123,
-          50.186054527
-        ]
-      },
-      "properties": {
-        "code": 3208,
-        "name": "Nymburk",
-        "crime_count": 343,
-        "person_count": 13604727
-      }
-    },
-    {
-      "type": "Feature",
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-          15.580685597,
-          49.607849317
-        ]
-      },
-      "properties": {
-        "code": 3601,
-        "name": "Havlíčkův Brod",
-        "crime_count": 199,
-        "person_count": 8946544
-      }
-    },
-    {
-      "type": "Feature",
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-          15.223356251,
-          49.431337386
-        ]
-      },
-      "properties": {
-        "code": 3304,
-        "name": "Pelhřimov",
-        "crime_count": 154,
-        "person_count": 7339167
-      }
-    },
-    {
-      "type": "Feature",
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-          16.643149229,
-          49.363134435
-        ]
-      },
-      "properties": {
-        "code": 3701,
-        "name": "Blansko",
-        "crime_count": 135,
-        "person_count": 8473542
-      }
-    },
-    {
-      "type": "Feature",
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-          13.59458501,
-          49.742696981
-        ]
-      },
-      "properties": {
-        "code": 3408,
-        "name": "Rokycany",
-        "crime_count": 122,
-        "person_count": 2613416
-      }
-    },
-    {
-      "type": "Feature",
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-          14.474339603,
-          48.974468561
-        ]
-      },
-      "properties": {
-        "code": 3301,
-        "name": "České Budějovice",
-        "crime_count": 760,
-        "person_count": 33871994
-      }
-    },
-    {
-      "type": "Feature",
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-          12.373921169,
-          50.07963492
-        ]
-      },
-      "properties": {
-        "code": 3402,
-        "name": "Cheb",
-        "crime_count": 487,
-        "person_count": 10838412
-      }
-    },
-    {
-      "type": "Feature",
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-          15.881656415,
-          49.214922777
-        ]
-      },
-      "properties": {
-        "code": 3710,
-        "name": "Třebíč",
-        "crime_count": 143,
-        "person_count": 9052226
-      }
-    },
-    {
-      "type": "Feature",
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-          13.333498172,
-          49.572981445
-        ]
-      },
-      "properties": {
-        "code": 3406,
-        "name": "Plzeň-jih",
-        "crime_count": 153,
-        "person_count": 6318021
-      }
-    },
-    {
-      "type": "Feature",
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-          15.939239735,
-          49.562633458
-        ]
-      },
-      "properties": {
-        "code": 3714,
-        "name": "Žďár nad Sázavou",
-        "crime_count": 145,
-        "person_count": 10355958
-      }
-    },
-    {
-      "type": "Feature",
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-          14.657802539,
-          49.414412559
-        ]
-      },
-      "properties": {
-        "code": 3308,
-        "name": "Tábor",
-        "crime_count": 220,
-        "person_count": 9143024
-      }
-    },
-    {
-      "type": "Feature",
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-          14.417781214,
-          50.084551856
-        ]
-      },
-      "properties": {
-        "code": 9999,
-        "name": "území Hlavního města Prahy",
-        "crime_count": 12680,
-        "person_count": 1864965924
-      }
-    },
-    {
-      "type": "Feature",
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-          13.211848457,
-          49.711454464
-        ]
-      },
-      "properties": {
-        "code": 3407,
-        "name": "Plzeň-sever",
-        "crime_count": 223,
-        "person_count": 10466694
-      }
-    },
-    {
-      "type": "Feature",
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-          13.417785012,
-          50.46047562
-        ]
-      },
-      "properties": {
-        "code": 3503,
-        "name": "Chomutov",
-        "crime_count": 458,
-        "person_count": 15752445
-      }
-    },
-    {
-      "type": "Feature",
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-          12.88607202,
-          50.221317479
-        ]
-      },
-      "properties": {
-        "code": 3403,
-        "name": "Karlovy Vary",
-        "crime_count": 463,
-        "person_count": 14489370
-      }
-    },
-    {
-      "type": "Feature",
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-          16.611084046,
-          49.191864079
-        ]
-      },
-      "properties": {
-        "code": 3702,
-        "name": "Brno-město",
-        "crime_count": 3260,
-        "person_count": 196862197
-      }
-    },
-    {
-      "type": "Feature",
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-          16.393609877,
-          49.973874431
-        ]
-      },
-      "properties": {
-        "code": 3611,
-        "name": "Ústí nad Orlicí",
-        "crime_count": 145,
-        "person_count": 11198250
-      }
-    },
-    {
-      "type": "Feature",
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-          15.200567089,
-          50.02813621
-        ]
-      },
-      "properties": {
-        "code": 3204,
-        "name": "Kolín",
-        "crime_count": 421,
-        "person_count": 12443088
-      }
-    },
-    {
-      "type": "Feature",
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-          13.997520364,
-          49.012923559
-        ]
-      },
-      "properties": {
-        "code": 3306,
-        "name": "Prachatice",
-        "crime_count": 106,
-        "person_count": 2726532
-      }
-    },
-    {
-      "type": "Feature",
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-          14.040692182,
-          50.660487652
-        ]
-      },
-      "properties": {
-        "code": 3510,
-        "name": "Ústí nad Labem",
-        "crime_count": 731,
-        "person_count": 16875138
-      }
-    },
-    {
-      "type": "Feature",
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-          12.633651183,
-          49.795278908
-        ]
-      },
-      "properties": {
-        "code": 3410,
-        "name": "Tachov",
-        "crime_count": 203,
-        "person_count": 5235352
-      }
-    },
-    {
-      "type": "Feature",
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-          12.929760208,
-          49.440492215
-        ]
-      },
-      "properties": {
-        "code": 3401,
-        "name": "Domažlice",
-        "crime_count": 154,
-        "person_count": 4519476
-      }
-    },
-    {
-      "type": "Feature",
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-          14.131801556,
-          50.533478322
-        ]
-      },
-      "properties": {
-        "code": 3506,
-        "name": "Litoměřice",
-        "crime_count": 292,
-        "person_count": 16829337
-      }
-    },
-    {
-      "type": "Feature",
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-          14.686966681,
-          49.781624796
-        ]
-      },
-      "properties": {
-        "code": 3201,
-        "name": "Benešov",
-        "crime_count": 298,
-        "person_count": 14209692
+        "person_count": 127269
       }
     },
     {
@@ -1086,7 +46,7 @@
         "code": 3811,
         "name": "Jeseník",
         "crime_count": 58,
-        "person_count": 1220703
+        "person_count": 36991
       }
     },
     {
@@ -1094,15 +54,15 @@
       "geometry": {
         "type": "Point",
         "coordinates": [
-          14.474106805,
-          50.350496933
+          15.832767778,
+          50.20922837
         ]
       },
       "properties": {
-        "code": 3206,
-        "name": "Mělník",
-        "crime_count": 334,
-        "person_count": 15834000
+        "code": 3602,
+        "name": "Hradec Králové",
+        "crime_count": 403,
+        "person_count": 166989
       }
     },
     {
@@ -1110,15 +70,15 @@
       "geometry": {
         "type": "Point",
         "coordinates": [
-          13.90237044,
-          49.261406739
+          15.223356251,
+          49.431337386
         ]
       },
       "properties": {
-        "code": 3307,
-        "name": "Strakonice",
-        "crime_count": 205,
-        "person_count": 4652115
+        "code": 3304,
+        "name": "Pelhřimov",
+        "crime_count": 154,
+        "person_count": 74133
       }
     },
     {
@@ -1126,15 +86,15 @@
       "geometry": {
         "type": "Point",
         "coordinates": [
-          18.010274928,
-          49.594375288
+          17.464701152,
+          49.988444645
         ]
       },
       "properties": {
-        "code": 3804,
-        "name": "Nový Jičín",
-        "crime_count": 429,
-        "person_count": 20494890
+        "code": 3801,
+        "name": "Bruntál",
+        "crime_count": 270,
+        "person_count": 89834
       }
     },
     {
@@ -1142,15 +102,15 @@
       "geometry": {
         "type": "Point",
         "coordinates": [
-          17.393115299,
-          49.297851258
+          16.643149229,
+          49.363134435
         ]
       },
       "properties": {
-        "code": 3708,
-        "name": "Kroměříž",
-        "crime_count": 191,
-        "person_count": 7002974
+        "code": 3701,
+        "name": "Blansko",
+        "crime_count": 135,
+        "person_count": 110046
       }
     },
     {
@@ -1158,15 +118,47 @@
       "geometry": {
         "type": "Point",
         "coordinates": [
-          12.64010155,
-          50.181298165
+          13.796674097,
+          50.356988767
         ]
       },
       "properties": {
-        "code": 3409,
-        "name": "Sokolov",
-        "crime_count": 275,
-        "person_count": 9370076
+        "code": 3507,
+        "name": "Louny",
+        "crime_count": 297,
+        "person_count": 87040
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          13.733398821,
+          50.103700689
+        ]
+      },
+      "properties": {
+        "code": 3212,
+        "name": "Rakovník",
+        "crime_count": 132,
+        "person_count": 56058
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          16.393609877,
+          49.973874431
+        ]
+      },
+      "properties": {
+        "code": 3611,
+        "name": "Ústí nad Orlicí",
+        "crime_count": 145,
+        "person_count": 138250
       }
     },
     {
@@ -1182,7 +174,7 @@
         "code": 3405,
         "name": "Plzeň-město",
         "crime_count": 1728,
-        "person_count": 41512502
+        "person_count": 201517
       }
     },
     {
@@ -1190,15 +182,15 @@
       "geometry": {
         "type": "Point",
         "coordinates": [
-          17.11183879,
-          49.471878207
+          13.824506773,
+          50.640397661
         ]
       },
       "properties": {
-        "code": 3709,
-        "name": "Prostějov",
-        "crime_count": 262,
-        "person_count": 10654266
+        "code": 3509,
+        "name": "Teplice",
+        "crime_count": 776,
+        "person_count": 127681
       }
     },
     {
@@ -1206,15 +198,303 @@
       "geometry": {
         "type": "Point",
         "coordinates": [
-          17.459684509,
-          49.069749602
+          13.333498172,
+          49.572981445
         ]
       },
       "properties": {
-        "code": 3711,
-        "name": "Uherské Hradiště",
-        "crime_count": 188,
-        "person_count": 12876136
+        "code": 3406,
+        "name": "Plzeň-jih",
+        "crime_count": 153,
+        "person_count": 70989
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          14.537641122,
+          50.685513247
+        ]
+      },
+      "properties": {
+        "code": 3501,
+        "name": "Česká Lípa",
+        "crime_count": 627,
+        "person_count": 103344
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          17.99618931,
+          49.338708608
+        ]
+      },
+      "properties": {
+        "code": 3810,
+        "name": "Vsetín",
+        "crime_count": 357,
+        "person_count": 142180
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          13.211848457,
+          49.711454464
+        ]
+      },
+      "properties": {
+        "code": 3407,
+        "name": "Plzeň-sever",
+        "crime_count": 223,
+        "person_count": 83069
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          13.59458501,
+          49.742696981
+        ]
+      },
+      "properties": {
+        "code": 3408,
+        "name": "Rokycany",
+        "crime_count": 122,
+        "person_count": 50258
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          14.474339603,
+          48.974468561
+        ]
+      },
+      "properties": {
+        "code": 3301,
+        "name": "České Budějovice",
+        "crime_count": 760,
+        "person_count": 200426
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          15.591243969,
+          49.396100083
+        ]
+      },
+      "properties": {
+        "code": 3707,
+        "name": "Jihlava",
+        "crime_count": 328,
+        "person_count": 116041
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          17.393115299,
+          49.297851258
+        ]
+      },
+      "properties": {
+        "code": 3708,
+        "name": "Kroměříž",
+        "crime_count": 191,
+        "person_count": 104522
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          14.315206643,
+          48.810907406
+        ]
+      },
+      "properties": {
+        "code": 3302,
+        "name": "Český Krumlov",
+        "crime_count": 206,
+        "person_count": 62038
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          14.010424458,
+          49.689877549
+        ]
+      },
+      "properties": {
+        "code": 3211,
+        "name": "Příbram",
+        "crime_count": 424,
+        "person_count": 117554
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          12.373921169,
+          50.07963492
+        ]
+      },
+      "properties": {
+        "code": 3402,
+        "name": "Cheb",
+        "crime_count": 487,
+        "person_count": 92636
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          18.348375868,
+          49.685365926
+        ]
+      },
+      "properties": {
+        "code": 3802,
+        "name": "Frýdek-Místek",
+        "crime_count": 657,
+        "person_count": 214669
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          16.611084046,
+          49.191864079
+        ]
+      },
+      "properties": {
+        "code": 3702,
+        "name": "Brno-město",
+        "crime_count": 3260,
+        "person_count": 396101
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          18.010274928,
+          49.594375288
+        ]
+      },
+      "properties": {
+        "code": 3804,
+        "name": "Nový Jičín",
+        "crime_count": 429,
+        "person_count": 151814
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          13.997520364,
+          49.012923559
+        ]
+      },
+      "properties": {
+        "code": 3306,
+        "name": "Prachatice",
+        "crime_count": 106,
+        "person_count": 51444
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          14.657802539,
+          49.414412559
+        ]
+      },
+      "properties": {
+        "code": 3308,
+        "name": "Tábor",
+        "crime_count": 220,
+        "person_count": 103898
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          18.282043232,
+          49.834644908
+        ]
+      },
+      "properties": {
+        "code": 3807,
+        "name": "Ostrava-město",
+        "crime_count": 3484,
+        "person_count": 316149
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          14.686966681,
+          49.781624796
+        ]
+      },
+      "properties": {
+        "code": 3201,
+        "name": "Benešov",
+        "crime_count": 298,
+        "person_count": 102228
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          15.335520496,
+          50.60190541
+        ]
+      },
+      "properties": {
+        "code": 3608,
+        "name": "Semily",
+        "crime_count": 133,
+        "person_count": 73004
       }
     },
     {
@@ -1230,7 +510,727 @@
         "code": 3209,
         "name": "Praha-východ",
         "crime_count": 619,
-        "person_count": 59295288
+        "person_count": 198312
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          16.970607253,
+          49.965283603
+        ]
+      },
+      "properties": {
+        "code": 3809,
+        "name": "Šumperk",
+        "crime_count": 259,
+        "person_count": 119974
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          14.040692182,
+          50.660487652
+        ]
+      },
+      "properties": {
+        "code": 3510,
+        "name": "Ústí nad Labem",
+        "crime_count": 731,
+        "person_count": 118839
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          12.929760208,
+          49.440492215
+        ]
+      },
+      "properties": {
+        "code": 3401,
+        "name": "Domažlice",
+        "crime_count": 154,
+        "person_count": 55796
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          12.64010155,
+          50.181298165
+        ]
+      },
+      "properties": {
+        "code": 3409,
+        "name": "Sokolov",
+        "crime_count": 275,
+        "person_count": 85964
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          14.903184344,
+          50.411351372
+        ]
+      },
+      "properties": {
+        "code": 3207,
+        "name": "Mladá Boleslav",
+        "crime_count": 503,
+        "person_count": 133876
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          14.102850226,
+          50.147335701
+        ]
+      },
+      "properties": {
+        "code": 3203,
+        "name": "Kladno",
+        "crime_count": 816,
+        "person_count": 168708
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          15.580685597,
+          49.607849317
+        ]
+      },
+      "properties": {
+        "code": 3601,
+        "name": "Havlíčkův Brod",
+        "crime_count": 199,
+        "person_count": 95176
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          15.912703113,
+          50.561006632
+        ]
+      },
+      "properties": {
+        "code": 3610,
+        "name": "Trutnov",
+        "crime_count": 362,
+        "person_count": 117192
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          13.295054086,
+          49.395520331
+        ]
+      },
+      "properties": {
+        "code": 3404,
+        "name": "Klatovy",
+        "crime_count": 293,
+        "person_count": 86853
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          14.071995783,
+          49.963823555
+        ]
+      },
+      "properties": {
+        "code": 3202,
+        "name": "Beroun",
+        "crime_count": 338,
+        "person_count": 100517
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          15.780204756,
+          50.038538396
+        ]
+      },
+      "properties": {
+        "code": 3606,
+        "name": "Pardubice",
+        "crime_count": 506,
+        "person_count": 179537
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          17.666332864,
+          49.226654003
+        ]
+      },
+      "properties": {
+        "code": 3705,
+        "name": "Zlín",
+        "crime_count": 349,
+        "person_count": 192333
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          12.633651183,
+          49.795278908
+        ]
+      },
+      "properties": {
+        "code": 3410,
+        "name": "Tachov",
+        "crime_count": 203,
+        "person_count": 56906
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          16.274883246,
+          50.162838796
+        ]
+      },
+      "properties": {
+        "code": 3607,
+        "name": "Rychnov nad Kněžnou",
+        "crime_count": 126,
+        "person_count": 80186
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          15.200567089,
+          50.02813621
+        ]
+      },
+      "properties": {
+        "code": 3204,
+        "name": "Kolín",
+        "crime_count": 421,
+        "person_count": 107268
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          13.636173506,
+          50.50300708
+        ]
+      },
+      "properties": {
+        "code": 3508,
+        "name": "Most",
+        "crime_count": 892,
+        "person_count": 108116
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          12.88607202,
+          50.221317479
+        ]
+      },
+      "properties": {
+        "code": 3403,
+        "name": "Karlovy Vary",
+        "crime_count": 463,
+        "person_count": 114995
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          17.11183879,
+          49.471878207
+        ]
+      },
+      "properties": {
+        "code": 3709,
+        "name": "Prostějov",
+        "crime_count": 262,
+        "person_count": 108717
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          13.90237044,
+          49.261406739
+        ]
+      },
+      "properties": {
+        "code": 3307,
+        "name": "Strakonice",
+        "crime_count": 205,
+        "person_count": 71571
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          17.902569153,
+          49.938663242
+        ]
+      },
+      "properties": {
+        "code": 3806,
+        "name": "Opava",
+        "crime_count": 459,
+        "person_count": 175042
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          17.132443152,
+          48.848934154
+        ]
+      },
+      "properties": {
+        "code": 3706,
+        "name": "Hodonín",
+        "crime_count": 297,
+        "person_count": 152119
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          16.162887615,
+          50.416704498
+        ]
+      },
+      "properties": {
+        "code": 3605,
+        "name": "Náchod",
+        "crime_count": 242,
+        "person_count": 110322
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          15.171076549,
+          50.724307632
+        ]
+      },
+      "properties": {
+        "code": 3504,
+        "name": "Jablonec nad Nisou",
+        "crime_count": 389,
+        "person_count": 92908
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          14.417781214,
+          50.084551856
+        ]
+      },
+      "properties": {
+        "code": 9999,
+        "name": "území Hlavního města Prahy",
+        "crime_count": 12680,
+        "person_count": 1357326
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          15.058448572,
+          50.76999733
+        ]
+      },
+      "properties": {
+        "code": 3505,
+        "name": "Liberec",
+        "crime_count": 959,
+        "person_count": 179921
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          18.541688975,
+          49.854002773
+        ]
+      },
+      "properties": {
+        "code": 3803,
+        "name": "Karviná",
+        "crime_count": 1484,
+        "person_count": 242166
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          16.882028935,
+          48.758968473
+        ]
+      },
+      "properties": {
+        "code": 3704,
+        "name": "Břeclav",
+        "crime_count": 287,
+        "person_count": 117576
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          14.319793795,
+          49.960079825
+        ]
+      },
+      "properties": {
+        "code": 3210,
+        "name": "Praha-západ",
+        "crime_count": 458,
+        "person_count": 158235
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          15.939239735,
+          49.562633458
+        ]
+      },
+      "properties": {
+        "code": 3714,
+        "name": "Žďár nad Sázavou",
+        "crime_count": 145,
+        "person_count": 119034
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          14.131801556,
+          50.533478322
+        ]
+      },
+      "properties": {
+        "code": 3506,
+        "name": "Litoměřice",
+        "crime_count": 292,
+        "person_count": 119357
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          16.998973501,
+          49.277469172
+        ]
+      },
+      "properties": {
+        "code": 3712,
+        "name": "Vyškov",
+        "crime_count": 135,
+        "person_count": 94274
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          15.795574991,
+          49.951092245
+        ]
+      },
+      "properties": {
+        "code": 3603,
+        "name": "Chrudim",
+        "crime_count": 185,
+        "person_count": 106398
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          15.003006769,
+          49.14404479
+        ]
+      },
+      "properties": {
+        "code": 3303,
+        "name": "Jindřichův Hradec",
+        "crime_count": 212,
+        "person_count": 90401
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          17.250869694,
+          49.593868518
+        ]
+      },
+      "properties": {
+        "code": 3805,
+        "name": "Olomouc",
+        "crime_count": 977,
+        "person_count": 237940
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          14.474106805,
+          50.350496933
+        ]
+      },
+      "properties": {
+        "code": 3206,
+        "name": "Mělník",
+        "crime_count": 334,
+        "person_count": 113100
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          13.417785012,
+          50.46047562
+        ]
+      },
+      "properties": {
+        "code": 3503,
+        "name": "Chomutov",
+        "crime_count": 458,
+        "person_count": 124035
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          16.468290614,
+          49.755937039
+        ]
+      },
+      "properties": {
+        "code": 3609,
+        "name": "Svitavy",
+        "crime_count": 145,
+        "person_count": 104576
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          17.450901072,
+          49.455108842
+        ]
+      },
+      "properties": {
+        "code": 3808,
+        "name": "Přerov",
+        "crime_count": 294,
+        "person_count": 128180
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          15.881656415,
+          49.214922777
+        ]
+      },
+      "properties": {
+        "code": 3710,
+        "name": "Třebíč",
+        "crime_count": 143,
+        "person_count": 110393
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          15.351624276,
+          50.437226243
+        ]
+      },
+      "properties": {
+        "code": 3604,
+        "name": "Jičín",
+        "crime_count": 139,
+        "person_count": 80578
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          14.147501997,
+          49.308795485
+        ]
+      },
+      "properties": {
+        "code": 3305,
+        "name": "Písek",
+        "crime_count": 165,
+        "person_count": 72525
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          15.04167123,
+          50.186054527
+        ]
+      },
+      "properties": {
+        "code": 3208,
+        "name": "Nymburk",
+        "crime_count": 343,
+        "person_count": 105463
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          17.459684509,
+          49.069749602
+        ]
+      },
+      "properties": {
+        "code": 3711,
+        "name": "Uherské Hradiště",
+        "crime_count": 188,
+        "person_count": 141496
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          16.048796591,
+          48.855498711
+        ]
+      },
+      "properties": {
+        "code": 3713,
+        "name": "Znojmo",
+        "crime_count": 279,
+        "person_count": 116028
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          15.268163913,
+          49.9483885
+        ]
+      },
+      "properties": {
+        "code": 3205,
+        "name": "Kutná Hora",
+        "crime_count": 209,
+        "person_count": 78072
       }
     }
   ]

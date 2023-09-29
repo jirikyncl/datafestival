@@ -4,6 +4,7 @@ set max_parallel_workers = 16;
 drop table if exists crime;
 drop table if exists district;
 drop table if exists population;
+drop table if exists unemployment;
 
 -- CRIME
 
@@ -49,3 +50,17 @@ alter table population add primary key (id);
 create index population_district_code on population (district_code);
 create index population_year on population (year);
 
+-- UNEMPLOYMENT
+create table unemployment as
+    select
+        row_number() over () AS id,
+        avg(u.unemployment_percentage) unemployment_percentage,
+        extract(year from u.measure_date) "year",
+        m.district_code
+    from common.population_unemployment u
+    join common.municipality m on m.code = u.municipality_code
+    group by m.district_code, extract(year from u.measure_date);
+
+create index unemployment_district_code on unemployment (district_code);
+create index unemployment_year on unemployment (year);
+alter table unemployment add primary key (id);

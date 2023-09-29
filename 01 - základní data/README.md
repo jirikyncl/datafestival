@@ -7,13 +7,12 @@ Cíl: Seznámení s datovými sadami.
 - Okresy: https://vdp.cuzk.cz/vdp/ruian/vymennyformat (https://vdp.cuzk.cz/vdp/ruian/vymennyformat?crKopie=on&casovyRozsah=U&upStatAzZsj=on&uzemniPrvky=ST&dsKompletni=on&datovaSada=K&vyZakladniAOrigHranice=on&vyber=vyZakladniAOrigHranice&search=)
 - Kriminalita: https://kriminalita.policie.cz/
 - Populace: https://www.czso.cz/csu/czso/obyvatelstvo-k-3112-podle-pohlavi-v-obcich
-- Nezamestnanost: https://www.czso.cz/csu/czso/uchazeci-o-zamestnani-dosazitelni-a-podil-nezamestnanych-osob-podle-obci_090417
-
+- Nezaměstnanost: https://www.czso.cz/csu/czso/uchazeci-o-zamestnani-dosazitelni-a-podil-nezamestnanych-osob-podle-obci_090417
 
 - Formáty XML, JSON, CSV.
 - Vždy je potřeba ze zdroje vybrat jen to podstatné (filtrování) a opravit případné chyby a normalizovat (převedení na společný formát - databáze). Workflow. Zpracováním různých formátů a zdrojů se bavíme v G-Tix s.r.o.
 - Pro účely tohoto workshopu jsme z těchto zdrojů připravili data s ohledem na okresy (agregace).
-- Původně bylo v plánu členění po obcích, ale práci by to komplikovalo.
+- Původně bylo v plánu členění po obcích, ale práci by to komplikovalo, zároveň data kriminality se týkají pouze trestných činů krádeže.
 
 ### Příklad zpracování populace
 - stažení, rozbalení
