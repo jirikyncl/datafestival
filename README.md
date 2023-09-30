@@ -14,7 +14,7 @@ Jaké máme nástroje - vizualizace-dat-2.png
 
 ## Jak budeme postupovat
 Workshop je rozdělen do několika kroků (složka s číselným označením), v každém z nich vytvoříme na základě 
-zdrojových dat nový dataset, vyexportujeme ho do GeoJSON (jeden ze standardů GML, KLM, WKM) a ukážeme nějaký typ vizualizace v mapě. V každé části je podsložka help, 
+zdrojových dat nový dataset, vyexportujeme ho do GeoJSON (jeden ze standardů GML, KML, ...) a ukážeme nějaký typ vizualizace v mapě. V každé části je podsložka help, 
 ve které jsou umístěny databázové dotazy i výstupy (pro případ, že se někde zasekneme nebo nebudeme stíhat).
 
 Začneme s propojením dat v databázi, zobrazením základních dat v prostoru a krůček po krůčku se dostaneme k porovnání 

@@ -4,10 +4,11 @@ Cíl: Zobrazit časový průběh relativní kriminality v okresech za posledníc
 
 ## Přidání několika let
 
-Spustíme: crime_time.sql
-Vyexportujeme GeoJSON crime_time_geojson.sql (help/crime_time_geojson.json)
+Doplníme dotaz crime_time_geojson.sql tak, aby obsahoval relativní kriminalitu agregovanou po rocích a okresech.
+
+Vyexportujeme GeoJSON.
 
 # Zobrazení
 
-- crime_time.html
+- Leaflet - crime_time.html
 

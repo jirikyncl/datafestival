@@ -4,8 +4,9 @@ Cíl: Zobrazení kriminality (krádeží) v absolutních číslech po okresech z
 
 ## Propojení údajů o kriminalitě s okresem
 
-Pustíme: crime_relative.sql
-Vyexportujeme jako GeoJSON: crime_relative_point_geojson.sql (klidně zase zobrazíme https://geojson.tools/) (výstup help/crime_point_geojson.json)
+Potřebujeme dopnit sql dotaz crime_point_geojson.sql tak, aby jsme ke každému okresu dostali počet trestných činů za rok 2022.
+
+Vyexportujeme jako GeoJSON a zobrazíme klidně zase https://geojson.tools/
 
 Co tomu chybí? Vizuální informace o počtu TČ. Něco, z čeho si na první pohled uděláme 
 obrázek o situaci - podstata vizualizace dat.

@@ -4,10 +4,10 @@ Cíl: Vztáhnout údaje o kriminalitě k počtu obyvatel a použít další typy
 
 ## Propojení kriminality, okresů a počtu obyvatel
 
-Spustíme: crime_relative.sql
-Vyexportujeme GeoJSON crime_relative_point_geojson.sql (výstup help/crime_relative_point_geojson.json)
+Potřebujeme dopnit sql dotaz crime_relative_point_geojson.sql tak, aby jsme ke každému okresu dostali počet trestných činů za rok 2022 a k tomu pro každý okres měli k dispozici i počet obyvatel.
 
-Alternativně v Excel
+Vyexportujeme jako GeoJSON.
+
 
 ## Vizualizace relativního počtu TČ
 

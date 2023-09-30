@@ -1,6 +1,6 @@
 # 01 - základní data
 
-Cíl: Seznámení s datovými sadami.
+Cíl: Seznámení se s datovými sadami.
 
 ## Zdroje dat
 
@@ -36,17 +36,30 @@ select * from population;
 select * from crime;
 select * from unemployment;
 
-TODO - vizualizace relaci tabulek?
+## Jednoduché zobrazení dat
 
-## Zobrazení dat
+- Excel like editor (viz csv v 00-instalace)
+- Databázový klient (select * from ...)
 
-- Excel like editor
-- Databázový klient
+## Zobrazení geometrie ve webové aplikaci
 
-## Zobrazení geometrie
+Pomocí GeoJSON - jeden ze standardů (GML, KML, Spatial CSV, ...) 
+Struktura GeoJSON je jednoduchá:
+- Feature
+- Geometry
+- Properties
 
-- databázový klient - select * from ...
-- GeoJSON - jeden ze standardů (GML, KML, Spatial CSV, ...) třeba zde: https://geojson.tools/ (výstup help/district_point_geojson.json)
+### Vytvoření GeoJSON
+
+Chceme zobrazit body nebo souřadnice okresů v mapě:
+- district_point_geojson.sql
+- district_coord_geojson.sql
+
+(výstup ve složce help)
+
+### Zobrazení GeoJSON
+
+- třeba zde: https://geojson.tools/
 - district.html - rozumí CSV (spatial) i GeoJSON
 
 

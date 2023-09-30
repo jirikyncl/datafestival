@@ -3,13 +3,11 @@ with crime_view as (
         sum(c.crime_count) crime_count,
         d.code,
         d.name,
-        d.definition_point,
-        p.person_count person_count
+        d.definition_point
     from district d
-    left join crime c on st_contains(d.coordinates, c.definition_point)
-    left join population p on d.code = p.district_code and c.year = p.year
-    where c.year = 2022
-    group by d.id, p.id
+    left join crime c on [TODO]
+    [TODO]
+    group by d.id
 )
 
 select json_build_object(
@@ -21,8 +19,7 @@ select json_build_object(
            'properties', json_build_object(
                'code', code,
                'name', name,
-               'crime_count', crime_count,
-               'person_count', person_count
+               'crime_count', crime_count
            )
        )
    )

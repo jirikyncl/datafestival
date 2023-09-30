@@ -6,8 +6,8 @@ with crime_view as (
         d.definition_point,
         p.person_count person_count
     from district d
-    left join crime c on st_contains(d.coordinates, c.definition_point)
-    left join population p on d.code = p.district_code and c.year = p.year
+    left join crime c on [TODO]
+    left join population p on [TODO] and c.year = p.year
     where c.year = 2022
     group by d.id, p.id
 )

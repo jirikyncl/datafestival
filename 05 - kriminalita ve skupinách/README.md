@@ -1,14 +1,13 @@
 # Kriminalita ve skupinách
 
-Cíl: Roztřídit okresy podle relativní kriminality do třech skupin (vysoká, střední, nízká) a zobrazit je barevně v mapě.
+Cíl: Roztřídit okresy podle relativní kriminality do čtyřech skupin a zobrazit je barevně v mapě.
 
 ## Roztřídění do skupin
 
-Spustíme: crime_class.sql
-Vyexportujeme GeoJSON (help/crime_class_coord_geojson.json).
+Potřebujeme doplnit sql dotaz crime_class_geojson.sql tak, aby obsahoval kvartily poměru trestných činů ku počtu obyvatel v okrese za rok 2022.
+
+Vyexportujeme GeoJSON a zobrazíme.
 
 ## Zobrazení skupin
 
-- Leaflet - crime_class.html
-
-GEOSERVER - TODO
+- pomocí barev polygonů v Leaflet - crime_class.html

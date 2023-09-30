@@ -3,7 +3,7 @@
 Cíl: Seznámit se s PostGIS prostorovými dotazy
 
 Rozšíření databáze PostGIS poskytuje funkcionalitu pro práci s prostorovými daty. Často potřebujeme zjistit
-kolik něčeho je uvnitř polygonu, s čím polygon sousedí, jak je velký... 
+kolik něčeho je uvnitř polygonu, s čím polygon sousedí, jak je velký...
 
 https://postgis.net/docs/manual-1.5/ch08.html
 

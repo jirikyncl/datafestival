@@ -4,10 +4,11 @@ Cíl: Zobrazit vedle sebe relativní kriminalitu a nezaměstnanost
 
 ## Příprava dat
 
-Spustíme: crime_and_unemployment.sql
-Vyexportujeme GeoJSON (help/crime_and_unemployment_geojson.json).
+K tomu co už máme přidáme ještě data o nezaměstnanosti. Doplníme crime_and_unemployment_geojson.sql.
+
+Vyexportujeme GeoJSON a zobrazíme.
 
 ## Zobrazení
 
-- Leaflet - crime_and_unemployment.html
+- Barvy a velikosti Leaflet - crime_and_unemployment.html
 
