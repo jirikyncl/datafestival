@@ -75,7 +75,7 @@
               100, '#CBCB67',     //If the crime_count_sum >= 100, color is yellow.
               750, '#C76A6A'        //If the crime_count_sum >= 100, color is red.
             ],
-            strokeWidth: 0
+            strokeWidth: 2
           });
 
           const bubbleLayer = new atlas.layer.BubbleLayer(datasource, null, {
@@ -112,6 +112,29 @@
             clusterSymLayer,
             symLayer,
           ]);
+
+          // Popup
+          const popup = new atlas.Popup();
+
+          map.events.add('click', [clusterBubbleLayer, bubbleLayer], function (e) {
+            if (e.shapes && e.shapes.length > 0) {
+              const properties = e.shapes[0].properties || e.shapes[0].data.properties;
+              let popupContent = '<div style="padding:10px">';
+              for (const key in properties) {
+                if (key !== 'image' && key !== 'imageUrl' && key !== '_azureMapsShapeId') {
+                  popupContent += '<b>' + key + ':</b> ' + properties[key] + '<br>';
+                }
+              }
+              popupContent += '</div>';
+
+              popup.setOptions({
+                content: popupContent,
+                position: e.position
+              });
+
+              popup.open(map);
+            }
+          });
         });
       }
 

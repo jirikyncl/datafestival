@@ -42,7 +42,6 @@
           const datasource = new atlas.source.DataSource();
           map.sources.add(datasource);
 
-          //Add a simple data layer for rendering the data.
           const layer = new atlas.layer.SimpleDataLayer(datasource);
 
           atlas.io.read(content).then(r => {

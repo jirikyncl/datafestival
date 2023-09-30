@@ -22,10 +22,12 @@ Cíl: Seznámení s datovými sadami.
 ## Data
 
 Máme tři základní datové sady:
-- district (okres)
-- population (obyvatelstvo)
-- crime (kriminalita)
-- unemployment (nezaměstnanost)
+- district (okres) - okresy mají jméno, hranice a centrum
+- population (obyvatelstvo) - počty obyvatel ke každému okresu po rocích 
+- crime (kriminalita) - počty trestných činů krádeží po rocích různě rozmístěné po ČR
+- unemployment (nezaměstnanost) - průměrná roční nezaměstnanost ke každému okresu 
+
+jak to vypadá - data.png
 
 Vyzkoušíme postupně:
 

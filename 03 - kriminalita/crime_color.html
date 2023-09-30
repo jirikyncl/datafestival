@@ -49,8 +49,17 @@
               '#73CC73';
       }
 
+      function onFeatureClick(e) {
+        const properties = e.layer.feature.properties;
+        const html = [];
+        for (const k of Object.keys(properties)) {
+          html.push(`<strong>${k}</strong>: ${properties[k]}`);
+        }
+        e.layer.bindPopup(html.join('<br>')).openPopup();
+      }
+
       function initMap(geoJson) {
-        L.geoJSON(JSON.parse(geoJson), {
+        const geoJsonLayer = L.geoJSON(JSON.parse(geoJson), {
           pointToLayer: function (feature, latlng) {
             const circleSize = feature.properties.crime_count * 3;
             const circleColor = getColor(feature.properties.crime_count);
@@ -64,6 +73,8 @@
             });
           }
         }).addTo(map);
+
+        geoJsonLayer.on('click', onFeatureClick);
       }
 
       function handleFile() {

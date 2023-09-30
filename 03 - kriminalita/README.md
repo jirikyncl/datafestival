@@ -14,7 +14,7 @@ obrázek o situaci - podstata vizualizace dat.
 
 - Máme připravenou HTML stránku crime_circle_size.html, kde pomocí JS knihovny Leaflet zobrazíme okresy, velikostí naznačíme počet TČ.
 - Vizualizace pomocí barev a velikosti: crime_color.html
-- Vizualizace pomoci crime_cluster.html
+- Vizualizace pomoci crime_cluster.html (obdoba - https://www.zasilkovna.cz/pobocky, https://www.postaonline.cz/vyhledat-pobocku, https://www.bezrealitky.cz/vyhledat)
 
 
 

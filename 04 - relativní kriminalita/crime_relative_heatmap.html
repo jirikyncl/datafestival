@@ -26,28 +26,22 @@
     </style>
 
     <script>
-      var map, datasource;
-
       function initMap(geoJson) {
-        //Initialize a map instance.
-        map = new atlas.Map('myMap', {
+        const map = new atlas.Map('myMap', {
           view: 'Auto',
           center: [14.4, 50],
           zoom: 6,
 
-          //Add authentication details for connecting to Azure Maps.
           authOptions: {
             authType: 'subscriptionKey',
             subscriptionKey: 'toI9nl-12Ow7jNVayayQbRXE0tM11TTLyD_DYKoe1rM'
           }
         });
 
-        //Wait until the map resources are ready.
         map.events.add('ready', function () {
-          datasource = new atlas.source.DataSource();
+          const datasource = new atlas.source.DataSource();
           map.sources.add(datasource);
 
-          //Create a heatmap and add it to the map.
           map.layers.add(new atlas.layer.HeatMapLayer(datasource, null, {
             weight: [
               'interpolate',
@@ -78,7 +72,6 @@
 
           atlas.io.read(geoJson).then(r => {
             if (r) {
-              //Add the feature data to the data source.
               datasource.add(r);
             }
           });

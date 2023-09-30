@@ -52,8 +52,17 @@
     return '#C76A6A'
   }
 
+  function onFeatureClick(e) {
+    const properties = e.layer.feature.properties;
+    const html = [];
+    for (const k of Object.keys(properties)) {
+      html.push(`<strong>${k}</strong>: ${properties[k]}`);
+    }
+    e.layer.bindPopup(html.join('<br>')).openPopup();
+  }
+
   function initMap(geoJson) {
-    L.geoJSON(JSON.parse(geoJson), {
+    const geoJsonLayer = L.geoJSON(JSON.parse(geoJson), {
       style: function (feature) {
         return { fillColor: getColor(feature.properties.category), color: '#ededed', weight: 1, fillOpacity: 0.7 };
       }
@@ -70,9 +79,10 @@
         opacity: 1,
         fillOpacity: 0.7
       });
-    }));
+    })).addTo(map);
 
-    unemploymentLayer.addTo(map);
+    geoJsonLayer.on('click', onFeatureClick);
+    unemploymentLayer.on('click', onFeatureClick);
   }
 
   function handleFile() {
