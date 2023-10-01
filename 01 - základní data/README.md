@@ -9,6 +9,7 @@
 - Populace: https://www.czso.cz/csu/czso/obyvatelstvo-k-3112-podle-pohlavi-v-obcich
 - Nezaměstnanost: https://www.czso.cz/csu/czso/uchazeci-o-zamestnani-dosazitelni-a-podil-nezamestnanych-osob-podle-obci_090417
 
+## Hrubý postup zpracování
 - Formáty XML, JSON, CSV.
 - Vždy je potřeba ze zdroje vybrat jen to podstatné (filtrování), opravit případné chyby a normalizovat (převedení na společný formát - databáze). Workflow. Zpracováním různých formátů a zdrojů se bavíme v **G-Tix s.r.o.**
 - Pro účely tohoto workshopu jsme z těchto zdrojů připravili data s ohledem na okresy (agregace).
