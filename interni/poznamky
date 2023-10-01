@@ -10,7 +10,7 @@ psql -h localhost -U postgres -d datafestival -f source_data.sql
 
 pustit prepare_base_data.sql
 
-pg_dump -OFp -h localhost -U postgres -p 5432 -d datafestival -t crime -t district -t population -f base_data.sql
+pg_dump -OFp -h localhost -U postgres -p 5432 -d datafestival -t crime -t district -t population -t unemployment -f base_data.sql
 
 ------------------------------------------------------------------
 
@@ -35,12 +35,6 @@ TČ - Extremismus - 96
 Přestupky - 97
 
 -------------------------------------------------------------------
-
-
-
----------------------------------------------------------------------
-
-psql -h localhost -U postgres -d datafestival -a -f base_view_geojson.sql > geojson.json
 
 ----------------------------------------------------------------------
 
@@ -74,9 +68,33 @@ DB client
 https://dbeaver.io/download/
 https://www.pgadmin.org/download/
 
--------------------------------------------
+---------------------------------------
 
-Azure postgres
+Docker
+
+---- pres dockerfile:
+
+sudo docker build -t kyncl/datafestival-postgis:latest .
+sudo docker push kyncl/datafestival-postgis:latest
+sudo docker run --name "datafestival-postgis-6" -p 35440:5432 -d -t kyncl/datafestival-postgis:latest
+
+------------------------------------------------
+
+AWS
+
+Vytvoreni instance z AMI
+Nastavit inbound rules na 22 a 5432 porty
+z geotix-master: ssh -i "geopas-key.key" ubuntu@ec2-3-72-76-19.eu-central-1.compute.amazonaws.com
+sudo docker run --name "datafestival-postgis" -p 5432:5432 -d -t kyncl/datafestival-postgis:latest
+
+CREATE USER test WITH PASSWORD 'Datafestival.2023';
+ALTER USER test WITH LOGIN;
+GRANT CONNECT ON DATABASE datafestival TO test;
+GRANT USAGE ON SCHEMA public TO test;
+GRANT SELECT ON ALL TABLES IN SCHEMA public TO test;
+------------------------------------------------
+
+Azure
 
 Azure Database for PostgreSQL Single Server
 
@@ -85,6 +103,14 @@ Zabezpeceni pripojeni:
 - Přidat 0.0.0.0–255.255.255.255
 - restartovat
 
-psql "host=datafestival-postgres.postgres.database.azure.com port=5432 dbname=postgres user=postgres@datafestival-postgres password=Datafestival.2023"
+pripojovaci retezec - psql "host=datafestival-postgis.postgres.database.azure.com port=5432 dbname=postgres user=postgres@datafestival-postgis password=Datafestival.2023"
 
+create extension postgis;
 
+psql "host=datafestival-postgis.postgres.database.azure.com port=5432 dbname=postgres user=postgres@datafestival-postgis password=Datafestival.2023" -f base_data.sql
+
+CREATE USER test WITH PASSWORD 'Datafestival.2023';
+ALTER USER test WITH LOGIN;
+GRANT CONNECT ON DATABASE postgres TO test;
+GRANT USAGE ON SCHEMA public TO test;
+GRANT SELECT ON ALL TABLES IN SCHEMA public TO test;

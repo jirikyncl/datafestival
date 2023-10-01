@@ -1,12 +1,41 @@
 # Instalace pgAdmin:
-https://www.pgadmin.org/download/
 
-Alternativně běží zde: TODO
+https://www.pgadmin.org/download/
 
 # Databáze:
 
-Docker TODO
+Spustíme lokálně přes docker - je připravený image kyncl/datafestival-postgis - https://hub.docker.com/r/kyncl/datafestival-postgis
 
-Alternativně běží zde: TODO
+nebo využijeme připravenou databázi na AWS či Azure cloudu.
 
+## Docker
 
+host: localhost
+port: 5432
+user: datafestival
+pass: Datafestival.2023
+dbname: datafestival
+
+Spustit příkazem: sudo docker run --name "datafestival-postgis" -p 5432:5432 -d -t kyncl/datafestival-postgis:latest
+
+Připojení: docker.png
+
+## Azure
+
+host: datafestival-postgis.postgres.database.azure.com
+port: 5432
+user: test@datafestival-postgis
+pass: Datafestival.2023
+dbname: postgres
+
+Připojení: azure.png
+
+## AWS
+
+host: ec2-3-72-76-19.eu-central-1.compute.amazonaws.com
+port: 5432
+user: test
+pass: Datafestival.2023
+dbname: datafestival
+
+Připojení: aws.png

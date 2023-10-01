@@ -11,4 +11,3 @@ Vyexportujeme GeoJSON.
 # Zobrazení
 
 - Leaflet - crime_time.html
-
