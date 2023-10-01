@@ -1,6 +1,6 @@
 # 01 - základní data
 
-Cíl: Seznámení se s datovými sadami.
+**Cíl:** Seznámení se s datovými sadami.
 
 ## Zdroje dat
 
@@ -10,7 +10,7 @@ Cíl: Seznámení se s datovými sadami.
 - Nezaměstnanost: https://www.czso.cz/csu/czso/uchazeci-o-zamestnani-dosazitelni-a-podil-nezamestnanych-osob-podle-obci_090417
 
 - Formáty XML, JSON, CSV.
-- Vždy je potřeba ze zdroje vybrat jen to podstatné (filtrování) a opravit případné chyby a normalizovat (převedení na společný formát - databáze). Workflow. Zpracováním různých formátů a zdrojů se bavíme v G-Tix s.r.o.
+- Vždy je potřeba ze zdroje vybrat jen to podstatné (filtrování), opravit případné chyby a normalizovat (převedení na společný formát - databáze). Workflow. Zpracováním různých formátů a zdrojů se bavíme v **G-Tix s.r.o.**
 - Pro účely tohoto workshopu jsme z těchto zdrojů připravili data s ohledem na okresy (agregace).
 - Původně bylo v plánu členění po obcích, ale práci by to komplikovalo, zároveň data kriminality se týkají pouze trestných činů krádeže.
 
@@ -22,19 +22,19 @@ Cíl: Seznámení se s datovými sadami.
 ## Data
 
 Máme tři základní datové sady:
-- district (okres) - okresy mají jméno, hranice a centrum
-- population (obyvatelstvo) - počty obyvatel ke každému okresu po rocích 
-- crime (kriminalita) - počty trestných činů krádeží po rocích různě rozmístěné po ČR
-- unemployment (nezaměstnanost) - průměrná roční nezaměstnanost ke každému okresu 
+- **district** (okres) - okresy mají jméno, hranice a centrum
+- **population** (obyvatelstvo) - počty obyvatel ke každému okresu po rocích 
+- **crime** (kriminalita) - počty trestných činů krádeží po rocích různě rozmístěné po ČR
+- **unemployment** (nezaměstnanost) - průměrná roční nezaměstnanost ke každému okresu 
 
-jak to vypadá - data.png
+[data.png](data.png)
 
 Vyzkoušíme postupně:
 
-select * from district;
-select * from population;
-select * from crime;
-select * from unemployment;
+- `select * from district;`
+- `select * from population;`
+- `select * from crime;`
+- `select * from unemployment;`
 
 ## Jednoduché zobrazení dat
 
@@ -43,7 +43,8 @@ select * from unemployment;
 
 ## Zobrazení geometrie ve webové aplikaci
 
-Pomocí GeoJSON - jeden ze standardů (GML, KML, Spatial CSV, ...) 
+Pomocí **GeoJSON** - jeden ze standardů (GML, KML, Spatial CSV, ...)
+
 Struktura GeoJSON je jednoduchá:
 - Feature
 - Geometry
@@ -52,15 +53,15 @@ Struktura GeoJSON je jednoduchá:
 ### Vytvoření GeoJSON
 
 Chceme zobrazit body nebo souřadnice okresů v mapě:
-- district_point_geojson.sql
-- district_coord_geojson.sql
+- [district_point_geojson.sql](district_point_geojson.sql)
+- [district_coord_geojson.sql](district_coord_geojson.sql)
 
-(výstup ve složce help)
+(výstup ve složce _help_)
 
 ### Zobrazení GeoJSON
 
 - třeba zde: https://geojson.tools/
-- district.html - rozumí CSV (spatial) i GeoJSON
+- [district.html](district.html) - rozumí CSV (spatial) i GeoJSON
 
 
 
