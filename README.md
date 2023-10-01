@@ -1,6 +1,6 @@
 # Workshop / Analýza prostorových dat a jejich vizualizace
 
-Já: Jiří Kynčl, **G-Tix s.r.o.** https://g-tix.cz
+Jiří Kynčl, **G-Tix s.r.o.** https://g-tix.cz
 
 **Cíl:** podívat se na několik otevřených datových sad ČR (okresy, kriminalita, nezaměstnanost, populace), 
 propojit je a vyzkoušet různé typy vizualizací dat v prostoru.
