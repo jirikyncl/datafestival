@@ -1,6 +1,9 @@
-# Instalace pgAdmin - databázový klient
+# Databázový klient
 
-Stáhnout a nainstalovat: https://www.pgadmin.org/download/
+Stáhnout a nainstalovat něco z: 
+
+- pgAdmin: https://www.pgadmin.org/download/
+- DBeaver: https://dbeaver.io/download/
 
 # Databáze
 

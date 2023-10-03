@@ -28,6 +28,9 @@
     </style>
 
     <script>
+      const popup = new atlas.Popup();
+      let map;
+      
       const defaultColor = '#ffffb2';
       const colorScale = [
         0.000, '#ffffb2',
@@ -37,7 +40,7 @@
       ];
 
       function initMap(geoJson) {
-        const map = new atlas.Map('myMap', {
+        map = new atlas.Map('myMap', {
           center: [14.4, 50],
           zoom: 6,
           pitch: 45,
@@ -50,15 +53,13 @@
         });
 
         map.events.add('ready', function () {
-          const popup = new atlas.Popup();
-
           const datasource = new atlas.source.GriddedDataSource(null, {
             cellWidth: 3,
             distanceUnits: 'miles',
             coverage: 0.8,
             centerLatitude: map.getCamera().center[1],
             aggregateProperties: {
-              crime_relation: ['avg', ['/', ['get', 'crime_count'], ['get', 'person_count']]]
+              crime_person_rate: ['avg', ['/', ['get', 'crime_count'], ['get', 'person_count']]]
             }
           });
           map.sources.add(datasource);
@@ -71,7 +72,7 @@
 
           let steppedExp = [
             'step',
-            ['get', 'crime_relation', ['get', 'aggregateProperties']],
+            ['get', 'crime_person_rate', ['get', 'aggregateProperties']],
             defaultColor
           ];
           steppedExp = steppedExp.concat(colorScale);
@@ -79,7 +80,7 @@
           const heightExp = [
             'interpolate',
             ['linear'],
-            ['get', 'crime_relation', ['get', 'aggregateProperties']],
+            ['get', 'crime_person_rate', ['get', 'aggregateProperties']],
             0.001, 100,
             0.006, 20000
           ];
