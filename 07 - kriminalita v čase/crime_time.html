@@ -57,14 +57,13 @@
 </head>
 <body>
     <form id="myForm">
+        <span id="year"></span>
         G-Tix
         <input type="file" id="fileInput" placeholder="Vybrat soubor">
         <button type="button" onclick="handleFile()">Načíst soubor</button>
     </form>
 
     <div id="myMap" style="height: 100%; width: 100%;"></div>
-
-    <div id="year"></div>
 
     <script>
       const map = L.map('myMap').setView([50, 14], 8);

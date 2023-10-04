@@ -7,7 +7,7 @@ propojit je a vyzkoušet různé typy vizualizací dat v prostoru.
 
 
 ## Vizualizace dat
-- **Vizualizace dat** - Grafické vyjádření dat (hodnoty, kategorie, porovnání, ...), klasicky grafy
+- **Vizualizace dat** - Grafické vyjádření informací (hodnoty, kategorie, porovnání, ...), klasicky grafy
 - **Proč vizualizujeme data** - při vizualizaci chápe mozek velmi rychle souvislosti (viz obrázek [vizualizace-dat-1.png](vizualizace-dat-1.png))
 - **Jaké máme možnosti** - [vizualizace-dat-2.png](vizualizace-dat-2.png)
 - **Grafy** - liniový, koláčový, sloupcový, ... [vis.png](vis.png) 
