@@ -2,6 +2,8 @@
 
 Jiří Kynčl, **G-Tix s.r.o.** https://g-tix.cz
 
+https://github.com/jirikyncl/datafestival
+
 **Cíl:** podívat se na několik otevřených datových sad ČR (okresy, kriminalita, nezaměstnanost, populace), 
 propojit je a vyzkoušet různé typy vizualizací dat v prostoru.
 
